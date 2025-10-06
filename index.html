@@ -1,69 +1,117 @@
 <!DOCTYPE HTML>
-
 <html>
 	<head>
-		<title>New webpage comming soon</title>
+		<title>New webpage coming soon</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				text-align: center;
+				background: #fff;
+				color: #333;
+			}
+			h1, p, a {
+				color: #2AD6FF;
+			}
+			form {
+				margin: 2em auto;
+				max-width: 300px;
+			}
+			input[type="email"] {
+				width: 100%;
+				padding: 10px;
+				margin-bottom: 10px;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+			}
+			input[type="submit"] {
+				width: 100%;
+				padding: 10px;
+				background-color: #2AD6FF;
+				border: none;
+				border-radius: 5px;
+				color: #fff;
+				cursor: pointer;
+				font-weight: bold;
+			}
+			input[type="submit"]:hover {
+				background-color: #10bfe8;
+			}
+			.icons a {
+				color: #2AD6FF;
+				font-size: 1.8em;
+				margin: 0 10px;
+				transition: color 0.3s ease;
+			}
+			.icons a:hover {
+				color: #10bfe8;
+			}
+			footer {
+				margin-top: 3em;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
 		<!-- Header -->
-			<header id="header">
-				<h1>Monikasouza.cz</h1>
-				<p>We are working to better serve you.<br />
-				Soon a new website keep tune</a>!</p>
-			</header>
+		<header id="header">
+			<h1>Monikasouza.cz</h1>
+			<p>We are working to better serve you.<br />
+			Soon a new website <a href="http://monikasouza.cz">keep tuned</a>!</p>
+		</header>
 
 		<!-- Signup Form -->
-			<form id="signup-form">
-	<input type="email" name="email" id="email" placeholder="Email Address" required />
-	<input type="submit" value="Sign Up" />
-</form>
+		<form id="signup-form">
+			<input type="email" name="email" id="email" placeholder="Email Address" required />
+			<input type="submit" value="Sign Up" />
+		</form>
 
-<script>
-document.getElementById("signup-form").addEventListener("submit", function(e){
-	e.preventDefault();
+		<script>
+		document.getElementById("signup-form").addEventListener("submit", function(e){
+			e.preventDefault();
 
-	const email = document.getElementById("email").value;
-	const data = { email: email };
+			const email = document.getElementById("email").value;
+			const data = { email: email };
 
-	fetch("https://script.google.com/macros/s/AKfycbxY-pSQ1Ecu-_xF9bptInViuVTF6DdOxhG6-VW8m25WX_HDvdwzoG2tV6dUN4rnG5mCIg/exec", {
-		method: "POST",
-		mode: "no-cors",
-		headers: {
-			"Content-Type": "application/json"
-		},
-		body: JSON.stringify(data)
-	})
-	.then(() => {
-		alert("✅ Thank you! Your email was submitted.");
-		document.getElementById("signup-form").reset();
-	})
-	.catch(err => {
-		alert("❌ There was an error submitting the form.");
-		console.error(err);
-	});
-});
-</script>
-
-			</form>
+			fetch("https://script.google.com/macros/s/AKfycbxY-pSQ1Ecu-_xF9bptInViuVTF6DdOxhG6-VW8m25WX_HDvdwzoG2tV6dUN4rnG5mCIg/exec", {
+				method: "POST",
+				mode: "no-cors",
+				headers: {
+					"Content-Type": "application/json"
+				},
+				body: JSON.stringify(data)
+			})
+			.then(() => {
+				alert("✅ Thank you! Your email was submitted.");
+				document.getElementById("signup-form").reset();
+			})
+			.catch(err => {
+				alert("❌ There was an error submitting the form.");
+				console.error(err);
+			});
+		});
+		</script>
 
 		<!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="mailto:monikasouza@partners.cz" class="icon fa-envelope"><span class="label">monikasouza@partners.cz</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Untitled.</li><li>Created for:<a href="http://monikasouza.cz">Monika Souza</a></li>
-				</ul>
-			</footer>
+		<footer id="footer">
+			<ul class="icons">
+				<li>
+					<a href="https://www.linkedin.com/in/monika-souza-efa-a22342187/" 
+					   class="icon brands fa-linkedin" target="_blank">
+						<span class="label">LinkedIn</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; 2025</li>
+				<li>Created for: <a href="http://monikasouza.cz">Monika Souza</a></li>
+			</ul>
+		</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
