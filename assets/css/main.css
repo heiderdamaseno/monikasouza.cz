@@ -885,3 +885,7 @@ button,
       left: auto;
       margin: 1em 0 0 0;
       position: relative; } }
+/* === Custom brand tweaks === */
+#footer .icons a:hover {
+  color: #2AD6FF !important; /* Monika Souza brand blue */
+}
