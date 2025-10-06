@@ -13,13 +13,41 @@
 			<header id="header">
 				<h1>Monikasouza.cz</h1>
 				<p>We are working to better serve you.<br />
-				Soon a new website <a href="http:/monikasouza.cz">keep tune</a>!</p>
+				Soon a new website keep tune</a>!</p>
 			</header>
 
 		<!-- Signup Form -->
-			<form id="signup-form" method="post" action="#">
-				<input type="email" name="email" id="email" placeholder="Email Address" />
-				<input type="submit" value="Sign Up" />
+			<form id="signup-form">
+	<input type="email" name="email" id="email" placeholder="Email Address" required />
+	<input type="submit" value="Sign Up" />
+</form>
+
+<script>
+document.getElementById("signup-form").addEventListener("submit", function(e){
+	e.preventDefault();
+
+	const email = document.getElementById("email").value;
+	const data = { email: email };
+
+	fetch("https://script.google.com/macros/s/AKfycbxY-pSQ1Ecu-_xF9bptInViuVTF6DdOxhG6-VW8m25WX_HDvdwzoG2tV6dUN4rnG5mCIg/exec", {
+		method: "POST",
+		mode: "no-cors",
+		headers: {
+			"Content-Type": "application/json"
+		},
+		body: JSON.stringify(data)
+	})
+	.then(() => {
+		alert("✅ Thank you! Your email was submitted.");
+		document.getElementById("signup-form").reset();
+	})
+	.catch(err => {
+		alert("❌ There was an error submitting the form.");
+		console.error(err);
+	});
+});
+</script>
+
 			</form>
 
 		<!-- Footer -->
@@ -27,8 +55,7 @@
 				<ul class="icons">
 					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-					<li><a href="#" class="icon fa-envelope"><span class="label">monikasouza@partners.cz</span></a></li>
+					<li><a href="mailto:monikasouza@partners.cz" class="icon fa-envelope"><span class="label">monikasouza@partners.cz</span></a></li>
 				</ul>
 				<ul class="copyright">
 					<li>&copy; Untitled.</li><li>Created for:<a href="http://monikasouza.cz">Monika Souza</a></li>
