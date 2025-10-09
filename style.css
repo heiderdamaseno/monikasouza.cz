@@ -2584,3 +2584,157 @@ h1,  h2,  h3,  h4,  h5,  h6{
     line-height: 42px;
   }
 }
+
+/* === Monika Brand - Primary Button (Unified Hover) === */
+.btn-primary {
+  display: inline-block;
+  background-color: #2AD6FF;   /* brand blue */
+  color: #ffffff;
+  border: 2px solid #2AD6FF;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #2AD6FF;   /* same blue on hover */
+  border-color: #2AD6FF;
+  color: #ffffff;
+  transform: translateY(-2px); /* small lift effect for feedback */
+}
+/* === Navigation Menu Hover === */
+header nav a {
+  color: #181C31;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover,
+header nav a:focus {
+  color: #2AD6FF !important;
+}
+
+/* === Monika Brand - Primary Button (Unified Hover) === */
+.btn-primary {
+  display: inline-block;
+  background-color: #2AD6FF;   /* brand blue */
+  color: #ffffff;
+  border: 2px solid #2AD6FF;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #2AD6FF;   /* same blue on hover */
+  border-color: #2AD6FF;
+  color: #ffffff;
+  transform: translateY(-2px); /* small lift effect for feedback */
+}
+
+/* === Navigation Menu Hover & Active === */
+header nav a {
+  color: #181C31;
+  transition: color 0.3s ease;
+}
+
+/* Hover and focus */
+header nav a:hover,
+header nav a:focus {
+  color: #2AD6FF !important;
+}
+
+/* Active menu item (covers all possible theme classes) */
+header nav a.active,
+header nav .current-menu-item > a,
+header nav .current > a,
+header nav li.active > a,
+header nav a.ud-menu-active,
+header nav a.text-primary,
+header nav a.text-purple,
+header nav a[class*="primary"],
+header nav a[class*="purple"],
+header nav li.ud-menu-active > a {
+  color: #2AD6FF !important;
+  font-weight: 600;
+  position: relative;
+}
+
+/* Optional underline for active link */
+header nav a.active::after,
+header nav .current-menu-item > a::after,
+header nav a.ud-menu-active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #2AD6FF;
+  border-radius: 2px;
+}
+
+/* Sticky header hover */
+header.is-sticky nav a:hover {
+  color: #2AD6FF !important;
+}
+
+/* === Footer & Social Links === */
+footer a {
+  color: #181C31;
+  transition: color 0.3s ease;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #2AD6FF !important;
+}
+
+/* Social icon hover */
+footer .social-icons a:hover svg path,
+footer .social-icons a:hover i {
+  color: #2AD6FF !important;
+  fill: #2AD6FF !important;
+}
+
+/* === Animated underline on hover === */
+header nav a {
+  position: relative;
+  text-decoration: none;
+}
+
+header nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #2AD6FF;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+header nav a:hover::after,
+header nav a:focus::after,
+header nav a.active::after,
+header nav .current-menu-item > a::after,
+header nav a.ud-menu-active::after {
+  width: 100%;
+}
+
+/* === Override Purple "sc" Menu Class === */
+header nav a.sc,
+header nav .sc a,
+header nav li .sc,
+header nav li a.sc {
+  color: #2AD6FF !important;
+}
+
+/* Keep hover underline animation consistent */
+header nav a.sc::after {
+  background-color: #2AD6FF !important;
+}
