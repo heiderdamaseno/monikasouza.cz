@@ -46,11 +46,11 @@
         <nav>
           <ul class="tc _o sf yo cg ep">
             <li><a href="index.html" class="xl" :class="{ 'mk': page === 'home' }">Home</a></li>
-            <li><a href="index.html#features" class="xl">Features</a></li>
+            <li><a href="index.html#features" class="xl">About me</a></li>
             <li class="c i" x-data="{ dropdown: false }">
               <a href="#!" class="xl tc wf yf bg" @click.prevent="dropdown = !dropdown"
                 :class="{ 'mk': page === 'blog-grid' || page === 'blog-single' || page === 'signin' || page === 'signup' || page === '404' }">
-                Pages
+                My Articles
 
                 <svg :class="{ 'wh': dropdown }" class="th mm we fd pf" xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512">
@@ -69,7 +69,7 @@
               </ul>
               <!-- Dropdown End -->
             </li>
-            <li><a href="index.html#support" class="xl">Support</a></li>
+            <li><a href="index.html#support" class="xl">QA (FAQ)</a></li>
           </ul>
         </nav>
 
