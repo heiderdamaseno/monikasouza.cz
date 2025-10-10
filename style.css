@@ -1,7 +1,8 @@
 /*!***************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/css/style.css ***!
   \***************************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap);
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+
 /*!********************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/swiper/swiper.min.css ***!
   \********************************************************************************************************************************/
@@ -2627,27 +2628,27 @@ header nav a:focus {
   text-transform: uppercase;
   transition: all 0.3s ease;
 }
-
 .btn-primary:hover {
-  background-color: #2AD6FF;   /* same blue on hover */
+  background-color: #2AD6FF;
   border-color: #2AD6FF;
   color: #ffffff;
-  transform: translateY(-2px); /* small lift effect for feedback */
+  transform: translateY(-2px);
 }
 
 /* === Navigation Menu Hover & Active === */
 header nav a {
   color: #181C31;
   transition: color 0.3s ease;
+  position: relative; /* for underline animation */
 }
 
-/* Hover and focus */
+/* Hover + focus */
 header nav a:hover,
 header nav a:focus {
   color: #2AD6FF !important;
 }
 
-/* Active menu item (covers all possible theme classes) */
+/* Active states (cover theme variations) */
 header nav a.active,
 header nav .current-menu-item > a,
 header nav .current > a,
@@ -2660,64 +2661,19 @@ header nav a[class*="purple"],
 header nav li.ud-menu-active > a {
   color: #2AD6FF !important;
   font-weight: 600;
-  position: relative;
 }
 
-/* Optional underline for active link */
-header nav a.active::after,
-header nav .current-menu-item > a::after,
-header nav a.ud-menu-active::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #2AD6FF;
-  border-radius: 2px;
-}
-
-/* Sticky header hover */
-header.is-sticky nav a:hover {
-  color: #2AD6FF !important;
-}
-
-/* === Footer & Social Links === */
-footer a {
-  color: #181C31;
-  transition: color 0.3s ease;
-}
-
-footer a:hover,
-footer a:focus {
-  color: #2AD6FF !important;
-}
-
-/* Social icon hover */
-footer .social-icons a:hover svg path,
-footer .social-icons a:hover i {
-  color: #2AD6FF !important;
-  fill: #2AD6FF !important;
-}
-
-/* === Animated underline on hover === */
-header nav a {
-  position: relative;
-  text-decoration: none;
-}
-
+/* Animated underline */
 header nav a::after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: -4px;
+  left: 0; bottom: -4px;
   width: 0%;
   height: 2px;
   background-color: #2AD6FF;
   transition: width 0.3s ease;
   border-radius: 2px;
 }
-
 header nav a:hover::after,
 header nav a:focus::after,
 header nav a.active::after,
@@ -2726,15 +2682,39 @@ header nav a.ud-menu-active::after {
   width: 100%;
 }
 
-/* === Override Purple "sc" Menu Class === */
+/* Sticky header hover insurance */
+header.is-sticky nav a:hover { color: #2AD6FF !important; }
+
+/* === Footer & Social Links === */
+footer a { color: #181C31; transition: color 0.3s ease; }
+footer a:hover,
+footer a:focus { color: #2AD6FF !important; }
+footer .social-icons a:hover svg path,
+footer .social-icons a:hover i {
+  color: #2AD6FF !important;
+  fill:  #2AD6FF !important;
+}
+
+/* === Override the theme's purple utility classes globally === */
+.mk, .mk:hover { color: #2AD6FF !important; }   /* active link color */
+.xl:hover, .xl:focus { color: #2AD6FF !important; } /* hover link color */
+
+/* In case "Home" has the theme's .sc class, force it to brand blue */
 header nav a.sc,
 header nav .sc a,
 header nav li .sc,
 header nav li a.sc {
   color: #2AD6FF !important;
 }
+header nav a.sc::after { background-color: #2AD6FF !important; }
 
-/* Keep hover underline animation consistent */
-header nav a.sc::after {
-  background-color: #2AD6FF !important;
+/* === Typography: Poppins (headings) + Inter (body) === */
+/* Body stays Inter */
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+/* Headings + theme heading class (.sj) to Poppins */
+h1, h2, h3, h4, h5, h6,
+.sj {
+  font-family: 'Poppins', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif !important;
 }
