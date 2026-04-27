@@ -13,6 +13,7 @@
 
 <body>
   <!-- ===== Header ===== -->
+
   <header class="about-header">
     <div class="about-header-inner">
       <a href="index.html" class="header-logo">
@@ -26,7 +27,7 @@
         <a href="Insights.html">Insights</a>
         <a href="QA.html">FAQ</a>
       </nav>
-
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
       <a href="#contact" class="btn-primary about-btn">Start a conversation</a>
     </div>
   </header>
@@ -139,17 +140,22 @@
   <!-- ===== Footer End ===== -->
 
   <!-- ====== Back To Top Start ===== -->
+<div x-data="{ scrollTop: false }">
   <button
     aria-label="Scroll To Top"
     class="xc wf xf ie ld vg sr gh tr g sa ta _a"
-    @click="window.scrollTo({top: 0, behavior: 'smooth'})"
-    @scroll.window="scrollTop = (window.pageYOffset > 50) ? true : false"
-    :class="{ 'uc' : scrollTop }">
+    @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    @scroll.window="scrollTop = window.pageYOffset > 50"
+    :class="{ 'uc': scrollTop }"
+  >
     <svg class="uh se qd" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
       <path
-        d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192-192z" />
+        d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+      />
     </svg>
   </button>
+</div>
+<!-- ====== Back To Top End ===== -->
   <!-- ====== Back To Top End ===== -->
 
   <script defer src="bundle.js"></script>
