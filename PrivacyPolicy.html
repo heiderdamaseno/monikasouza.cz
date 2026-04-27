@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insights | Keep informed of my view from the Financial Wold</title>
+  <link rel="icon" href="favicon.ico">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body x-data="{ page: 'articles', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+  x-init="
+         darkMode = JSON.parse(localStorage.getItem('darkMode'));
+         $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+  :class="{'b eh': darkMode === true}">
+  <!-- ===== Header Start ===== -->
+  <header class="g s r vd ya cj" :class="{ 'hh sm _k dj bl ll' : stickyMenu }"
+    @scroll.window="stickyMenu = (window.pageYOffset > 20) ? true : false">
+    <div class="bb ze ki xn 2xl:ud-px-0 oo wf yf i">
+      <div class="vd to/4 tc wf yf">
+        <a href="index.html">
+          <img class="om site-logo" src="images/Logo_monika-financial-adviser-brno-czech-republic.svg" alt="Logo Light" />
+
+        </a>
+
+        <!-- Hamburger Toggle BTN -->
+        <button class="po rc" @click="navigationOpen = !navigationOpen">
+          <span class="rc i pf re pd">
+            <span class="du-block h q vd yc">
+              <span class="rc i r s eh um tg te rd eb ml jl dl" :class="{ 'ue el': !navigationOpen }"></span>
+              <span class="rc i r s eh um tg te rd eb ml jl fl" :class="{ 'ue qr': !navigationOpen }"></span>
+              <span class="rc i r s eh um tg te rd eb ml jl gl" :class="{ 'ue hl': !navigationOpen }"></span>
+            </span>
+            <span class="du-block h q vd yc lf">
+              <span class="rc eh um tg ml jl el h na r ve yc" :class="{ 'sd dl': !navigationOpen }"></span>
+              <span class="rc eh um tg ml jl qr h s pa vd rd" :class="{ 'sd rr': !navigationOpen }"></span>
+            </span>
+          </span>
+        </button>
+        <!-- Hamburger Toggle BTN -->
+      </div>
+
+      <div class="vd wo/4 sd qo f ho oo wf yf" :class="{ 'd hh rm sr td ud qg ug jc yh': navigationOpen }">
+        <nav>
+          <ul class="tc _o sf yo cg ep">
+            <li><a href="index.html" class="xl" :class="{ 'mk': page === 'home' }">Home</a></li>
+            <li class="c i" x-data="{ dropdown: false }">
+              <a href="#!" class="xl tc wf yf bg" @click.prevent="dropdown = !dropdown"
+
+
+                <svg :class="{ 'wh': dropdown }" class="th mm we fd pf" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512">
+                  <path
+                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                </svg>
+              </a>
+
+              <!-- Dropdown Start -->
+              <ul class="a" :class="{ 'tc': dropdown }">
+                <li><a href="blog-single.html" class="xl" :class="{ 'mk': page === 'blog-single' }">Article 02</a></li>
+                <li><a href="PrivacyPolicy.html" class="xl">Privacy Policy</a></li>
+              </ul>
+              <!-- Dropdown End -->
+            </li>
+              <li><a href="index.html#contact" class="xl">Contact</a></li>
+
+          </ul>
+        </nav>
+
+      
+    </div>
+  </header>
+
+  <!-- ===== Header End ===== -->
+   <!-- Right side Start ===== -->
+
+         <div class="xc fn zd/2 2xl:ud-w-187.5 bd 2xl:ud-h-171.5 h q r hero-photo-container">
+        <img src="images/hero.png" alt="Woman" class="ua monika-photo" />
+      </div>
+  <!-- Right side End==== -->
+
+    <!-- Body Start ===== -->
+      <div class="bb ze ki xn 2xl:ud-px-0">
+        <div class="tc _o">
+          <div class="animate_left jn/2 hero-copy">
+            <h1 class="fk vj zp or kk wm wb">
+              Use of cookies
+            </h1>
+
+            <p class="fq hero-subtext">
+A cookie is a short text file that a website sends to your browser...
+Cookies serve a variety of purposes. For example, we use them to store your settings or to track the number of visitors to a website.
+
+After you have given your consent, so-called tracking cookies will be used. Without your consent, only technical cookies will be used.
+
+Changing your consent
+You can call up the offer to grant/withdraw your consent to the use of cookies again by deleting the cookies in your browser and reloading the page.
+ <br><br>
+   <li><a href="https://policies.google.com/privacy?hl=cs" target="_blank" class="xl">Privacy</a></li>
+   <li><a href="https://policies.google.com/terms?hl=cs" target="_blank" class="xl">Terms of Service</a></li>
+   
+
+  <!-- Body End==== -->
+  <main>
+    
+</body>
+
+</html>

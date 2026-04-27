@@ -1115,6 +1115,11 @@ h1,  h2,  h3,  h4,  h5,  h6{
 }
 .bf{
   flex-shrink: 0;
+  width: 288px !important;
+  height: 288px !important;
+  object-fit: cover;
+  border-radius: 9999px;
+  max-width: 288px;
 }
 .cf{
   flex-shrink: 0;
@@ -1390,7 +1395,7 @@ h1,  h2,  h3,  h4,  h5,  h6{
   fill: #D1D8E0;
 }
 .wh{
-  fill: #4E6BFF;
+  fill: #2AD6FF;
 }
 .xh{
   fill: #79808A !important;
@@ -1799,7 +1804,7 @@ h1,  h2,  h3,  h4,  h5,  h6{
 }
 
 .ul:hover{
-  fill: #4E6BFF;
+  fill: #2AD6FF;
 }
 
 .vl:hover{
@@ -1899,7 +1904,7 @@ h1,  h2,  h3,  h4,  h5,  h6{
 }
 
 .c:hover .mm{
-  fill: #4E6BFF;
+  fill: #2AD6FF;
 }
 
 .b .nm{
@@ -2586,25 +2591,7 @@ h1,  h2,  h3,  h4,  h5,  h6{
   }
 }
 
-/* === Monika Brand - Primary Button (Unified Hover) === */
-.btn-primary {
-  display: inline-block;
-  background-color: #2AD6FF;   /* brand blue */
-  color: #ffffff;
-  border: 2px solid #2AD6FF;
-  padding: 0.75rem 2rem;
-  border-radius: 9999px;
-  font-weight: 600;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-}
 
-.btn-primary:hover {
-  background-color: #2AD6FF;   /* same blue on hover */
-  border-color: #2AD6FF;
-  color: #ffffff;
-  transform: translateY(-2px); /* small lift effect for feedback */
-}
 /* === Navigation Menu Hover === */
 header nav a {
   color: #181C31;
@@ -2616,24 +2603,7 @@ header nav a:focus {
   color: #2AD6FF !important;
 }
 
-/* === Monika Brand - Primary Button (Unified Hover) === */
-.btn-primary {
-  display: inline-block;
-  background-color: #2AD6FF;   /* brand blue */
-  color: #ffffff;
-  border: 2px solid #2AD6FF;
-  padding: 0.75rem 2rem;
-  border-radius: 9999px;
-  font-weight: 600;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-}
-.btn-primary:hover {
-  background-color: #2AD6FF;
-  border-color: #2AD6FF;
-  color: #ffffff;
-  transform: translateY(-2px);
-}
+
 
 /* === Navigation Menu Hover & Active === */
 header nav a {
@@ -2717,4 +2687,781 @@ body {
 h1, h2, h3, h4, h5, h6,
 .sj {
   font-family: 'Poppins', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif !important;
+}
+
+/* Push all content below the top menu */
+body {
+  padding-top: 90px; /* adjust 70–110px until it looks perfect */
+}
+/* === HERO LAYOUT OVERRIDES === */
+.hero-custom {
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;            /* space under the menu */
+}
+
+/* The theme hides this column on mobile (.xc = display:none),
+   so we force it to show inside the hero */
+.hero-custom .xc.fn {
+  display: block;
+}
+
+/* Remove template absolute positioning (h q r = abs, top:0, right:0) */
+.hero-custom .h.q.r {
+  position: relative;
+  top: auto;
+  right: auto;
+}
+
+/* Image column (left in DOM, but flexed to right visually) */
+.hero-custom > div:first-child {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: flex-end;    /* push photo to the right */
+}
+
+/* Text column */
+.hero-custom > div:last-child {
+  flex: 1 1 50%;
+}
+
+/* === PHOTO STYLING === */
+.monika-photo {
+  max-height: 85vh;   /* make image fit inside viewport height */
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  max-width: 550px;
+
+  /* move line to RIGHT side */
+  border-left: none;
+  border-right: 80px solid #fbfcfc;
+  padding-right: 18px;   /* space between line and photo */
+
+  margin-left: 0;
+}
+/* === MOBILE (phone) VERSION === */
+@media (max-width: 768px) {
+  .hero-custom {
+    flex-direction: column-reverse;   /* text first, image below */
+    text-align: center;
+    padding-top: 1.5rem;
+  }
+
+  .hero-custom > div:first-child,
+  .hero-custom > div:last-child {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+
+  .monika-photo {
+    max-width: 80%;
+    margin: 24px auto 0 auto;
+
+    /* move the white line to the bottom on small screens */
+    border-right: 0;
+    border-bottom: 4px solid #ffffff;
+    padding-right: 0;
+    padding-bottom: 14px;
+  }
+}
+/* === VERTICAL DIVIDER BETWEEN TEXT & PHOTO === */
+.hero-custom {
+  position: relative;
+}
+
+/* wrapper around the photo (the first div inside hero section) */
+.hero-custom > div:first-child {
+  position: relative;
+  padding-left: 24px;         /* space for the line */
+}
+
+/* white vertical line */
+.hero-custom > div:first-child::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10%;
+  bottom: 10%;
+  width: 4px;
+  background: #ffffff;
+  z-index: 2;
+}
+
+/* keep the image nicely sized */
+.hero-custom img.monika-photo {
+  display: block;
+  width: 100%;
+  max-width: 550px;
+  border-radius: 12px;
+}
+
+/* Mobile: remove side line, put it under the photo instead */
+@media (max-width: 768px) {
+  .hero-custom > div:first-child {
+    padding-left: 0;
+  }
+
+  .hero-custom > div:first-child::before {
+    display: none;
+  }
+
+  .hero-custom img.monika-photo {
+    max-width: 80%;
+    margin: 24px auto 0;
+    border-bottom: 4px solid #ffffff;
+    padding-bottom: 12px;
+  }
+}
+/* Restore big half-screen image */
+.hero-photo-container {
+  height: 100vh;       /* full screen height */
+  overflow: hidden;    /* crop excess image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.monika-photo {
+  height: 100%;
+  width: auto;
+  max-width: none;     /* REMOVE forced shrinking */
+  object-fit: cover;   /* fill the area nicely */
+}
+/* === FINAL HERO PHOTO FIX === */
+
+/* Vertical white “line” on the RIGHT of the photo */
+.hero-photo-container::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 10%;
+  bottom: 10%;
+  width: 80px;
+  background: #fbfcfc;
+  z-index: 2;
+}
+
+/* === Mobile tweaks === */
+@media (max-width: 768px) {
+  .hero-photo-container {
+    height: auto;
+    max-height: none;
+    justify-content: center;
+  }
+
+  .hero-custom img.monika-photo,
+  .monika-photo {
+    width: 80% !important;
+    height: auto !important;
+    max-width: 400px;
+  }
+
+  .hero-photo-container::after {
+    display: none;          /* no side bar on phones */
+  }
+}
+/* === FINAL HERO IMAGE FIX === */
+
+/* Right-side image container (keeps template classes, but we control size) */
+.hero-photo-container {
+  position: absolute;   /* reinforces h q r */
+  top: 0;
+  right: 0;
+  height: 100vh;        /* tall hero */
+  max-height: 780px;    /* tweak this if needed */
+  width: 65%;           /* extends to right edge */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Big photo, filling the container */
+.hero-photo-container img.monika-photo {
+  height: 100% !important;
+  width: auto !important;
+  max-width: none !important;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Vertical white band on the RIGHT side of the photo */
+.hero-photo-container::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 10%;
+  bottom: 10%;
+  width: 80px;          /* thickness of the “line” */
+  background: #fbfcfc;  /* same light background */
+  z-index: 2;
+}
+
+/* Optional: tweak on very large screens */
+@media (min-width: 1536px) {
+  .hero-photo-container {
+    width: 45%;
+  }
+}
+/* === HERO MOBILE STACK FIX (IMAGE ABOVE TEXT) === */
+@media (max-width: 768px) {
+  /* 1) Let the image container flow in the normal layout */
+  .hero-photo-container {
+    position: relative !important;  /* override .h.q.r + previous rules */
+    top: auto !important;
+    right: auto !important;
+
+    width: 100%;
+    height: auto;
+    max-height: none;
+    margin: 0 auto 1.5rem auto;   /* space under the photo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+  }
+
+  /* 2) Make the photo itself responsive */
+  .hero-photo-container img.monika-photo {
+    position: relative !important; /* override .h.q.r */
+    top: auto !important;
+    right: auto !important;
+
+    width: 90% !important;
+    max-width: 420px;
+    height: auto !important;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 0 auto;
+  }
+
+  /* 3) Remove the vertical white band on phones */
+  .hero-photo-container::after {
+    display: none !important;
+  }
+
+  /* 4) Hero text: center + resize on mobile */
+  section.gj.do.ir.hj.sp.jr.i.pg .bb {
+    text-align: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  section.gj.do.ir.hj.sp.jr.i.pg h1 {
+    font-size: 1.9rem;
+    line-height: 2.3rem;
+  }
+
+  section.gj.do.ir.hj.sp.jr.i.pg p.fq {
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+  }
+}
+
+/* === HERO SPACING TWEAK === */
+section.gj.do.ir.hj.sp.jr.i.pg {
+  padding-top: 8.75rem; /* original top spacing from .gj */
+}
+
+@media (max-width: 768px) {
+  section.gj.do.ir.hj.sp.jr.i.pg {
+    padding-top: 3rem;
+  }
+}
+
+/* === HERO IMAGE SIZING (restore) === */
+.hero-photo-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  max-height: 820px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-photo-container img.monika-photo,
+.monika-photo {
+  height: 100%;
+  max-height: 100%;
+  width: auto;
+  max-width: none;
+  object-fit: cover;
+  display: block;
+}
+  overflow: hidden;
+}
+
+.hero-photo-container img.monika-photo,
+.monika-photo {
+  height: 100%;
+  max-height: 100%;
+  width: auto;
+  max-width: none;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hero-photo-container {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+
+    width: 100%;
+    height: auto;
+    max-height: none;
+    margin: 0 auto 1.5rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+  }
+
+  .hero-photo-container img.monika-photo,
+  .hero-custom img.monika-photo,
+  .monika-photo {
+    width: 90% !important;
+    max-width: 420px;
+    height: auto !important;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 0 auto;
+  }
+
+  .hero-photo-container::after {
+    display: none !important;
+  }
+}
+
+/* === HEADER LOGO POSITION & SIZE === */
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;  /* space between logo and text */
+}
+
+.header-logo img {
+  display: block;
+  height: 68px;        /* tweak 32–48px as you like */
+  width: auto;
+}
+
+
+/* keep it nicely aligned on mobile too */
+@media (max-width: 768px) {
+  .header-logo {
+    margin-right: 1rem;  /* small space before the hamburger icon */
+  }
+}
+/* === Put menu (nav + top-right button) to the right on desktop === */
+@media (min-width: 1024px) {
+  .header-right {
+    justify-content: flex-end;   /* push content to the right */
+    gap: 2.5rem;                 /* space between nav and button */
+  }
+}
+
+/* === SCROLL-TO-TOP BUTTON BRAND COLORS (MONIKA BLUE) === */
+/* Works whether it's a <button> or <a>, as long as it has aria-label="Scroll To Top" */
+
+button[aria-label="Scroll To Top"],
+a[aria-label="Scroll To Top"] {
+  background-color: #2AD6FF !important;   /* brand blue */
+  border: 2px solid #2AD6FF !important;
+  border-radius: 9999px !important;
+}
+
+/* Make sure the arrow is white */
+button[aria-label="Scroll To Top"] svg,
+a[aria-label="Scroll To Top"] svg,
+button[aria-label="Scroll To Top"] svg path,
+a[aria-label="Scroll To Top"] svg path {
+  stroke: #FFFFFF !important;
+  fill:   #FFFFFF !important;
+}
+
+/* Hover state: slightly darker blue */
+button[aria-label="Scroll To Top"]:hover,
+a[aria-label="Scroll To Top"]:hover {
+  background-color: #21B6DF !important;
+  border-color: #21B6DF !important;
+}
+/* Desktop: make hero image wider/fit and keep it on the right */
+@media (min-width: 1024px) {
+  .hero-photo-container {
+    position: absolute !important;
+    top: 0;
+    right: 0;
+    width: 46%;          /* roughly half screen for hero image */
+    max-height: 70vh;    /* cap height to avoid forcing scroll */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .hero-photo-container img.monika-photo,
+  .monika-photo {
+    height: 100%;
+    max-height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+  }
+}
+
+/* Brand-colored play button circle */
+.play-button {
+  background-color: #2AD6FF !important;      /* your brand blue */
+  color: #ffffff !important;                 /* icon white */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(42, 214, 255, 0.25);
+}
+
+.play-button svg path {
+  fill: #ffffff !important;
+}
+/* Monika brand: replace theme primary background color */
+.gh {
+  background-color: #2AD6FF !important;   /* your brand blue */
+}
+/* === Monika Brand – Primary Buttons (default + sticky) === */
+/* Use class="btn-primary" on any CTA (hero, header, contact, etc.) */
+
+.btn-primary,
+.btn-primary.sh,
+a.lk.dk.rg.tc.wf.xf._l.gi.hi,
+a.lk.dk.rg.tc.wf.xf._l.gi.hi.sh {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+
+  background-color: #2AD6FF !important;   /* brand color */
+  color: #ffffff !important;              /* white text */
+  border: 2px solid #2AD6FF !important;   /* brand outline */
+
+  transition: all 0.25s ease;
+}
+
+/* Hover: white background, brand text, brand outline */
+.btn-primary:hover,
+.btn-primary.sh:hover,
+a.lk.dk.rg.tc.wf.xf._l.gi.hi:hover,
+a.lk.dk.rg.tc.wf.xf._l.gi.hi.sh:hover {
+  background-color: #ffffff !important;
+  color: #2AD6FF !important;
+  border-color: #2AD6FF !important;
+  transform: translateY(-2px);
+}
+
+/* === Navigation Menu Links (keep them as simple text links) === */
+header nav a {
+  color: #181C31 !important;        /* dark text */
+  background: transparent !important;
+  border: none !important;
+  padding: 0;
+  text-transform: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+/* Hover + focus on menu links */
+header nav a:hover,
+header nav a:focus {
+  color: #2AD6FF !important;        /* brand color on hover */
+}
+
+/* Active menu states */
+header nav a.active,
+header nav .current-menu-item > a,
+header nav .current > a,
+header nav li.active > a,
+header nav a.ud-menu-active,
+header nav li.ud-menu-active > a {
+  color: #2AD6FF !important;
+  font-weight: 600;
+}
+/* === Contact section – social icon hover to Monika blue === */
+#contact ul.tc.wf.fg a {
+  transition: all 0.25s ease;
+}
+
+#contact ul.tc.wf.fg a:hover {
+  background-color: #2AD6FF !important;  /* brand blue */
+  border-color: #2AD6FF !important;
+}
+
+/* make the icon inside turn white on hover */
+#contact ul.tc.wf.fg a:hover svg path {
+  fill: #FFFFFF !important;
+}
+/* === Contact – left card: brand background + white text === */
+#contact .contact-info-card {
+  background-color: #2AD6FF !important;  /* brand blue */
+  color: #ffffff !important;
+  border-color: transparent !important;
+}
+
+/* All text & links inside become white */
+#contact .contact-info-card h4,
+#contact .contact-info-card p,
+#contact .contact-info-card a {
+  color: #ffffff !important;
+}
+
+/* Email/phone links – remove any underline color weirdness */
+#contact .contact-info-card a:hover,
+#contact .contact-info-card a:focus {
+  color: #ffffff !important;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+/* Decorative line inside (the .rc.nd.rh.tm.lc.fb span) – make it a soft white line */
+#contact .contact-info-card .rc.nd.rh.tm.lc.fb {
+  background-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+/* === Social icons inside the left card – white circles on blue === */
+#contact .contact-info-card ul.tc.wf.fg a {
+  background-color: #ffffff !important;    /* white bubble */
+  border-color: #ffffff !important;
+  transition: all 0.25s ease;
+}
+
+/* Icon color inside the bubbles */
+#contact .contact-info-card ul.tc.wf.fg a svg path {
+  fill: #2AD6FF !important;               /* brand blue icon */
+}
+
+/* Hover: transparent circle with white line + white icon */
+#contact .contact-info-card ul.tc.wf.fg a:hover {
+  background-color: transparent !important;
+  border-color: #ffffff !important;
+}
+
+#contact .contact-info-card ul.tc.wf.fg a:hover svg path {
+  fill: #ffffff !important;
+}
+/* === CONTACT LEFT COLUMN – BRAND BACKGROUND + WHITE TEXT === */
+/* Target the existing left card by its class combo */
+#contact .vk.sg.hh.sm.yh.rq.i.pg {
+  background-color: #2AD6FF !important;  /* brand blue */
+  color: #ffffff !important;
+  border-color: transparent !important;
+}
+
+/* Make all text + links inside white */
+#contact .vk.sg.hh.sm.yh.rq.i.pg h4,
+#contact .vk.sg.hh.sm.yh.rq.i.pg p,
+#contact .vk.sg.hh.sm.yh.rq.i.pg a {
+  color: #ffffff !important;
+}
+
+/* Email/phone links hover */
+#contact .vk.sg.hh.sm.yh.rq.i.pg a:hover,
+#contact .vk.sg.hh.sm.yh.rq.i.pg a:focus {
+  color: #ffffff !important;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+/* Decorative line span inside the card */
+#contact .vk.sg.hh.sm.yh.rq.i.pg .rc.nd.rh.tm.lc.fb {
+  background-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+/* === Social icons inside the left card === */
+#contact .vk.sg.hh.sm.yh.rq.i.pg ul.tc.wf.fg a {
+  background-color: #ffffff !important;    /* white circle */
+  border-color: #ffffff !important;
+  transition: all 0.25s ease;
+}
+
+#contact .vk.sg.hh.sm.yh.rq.i.pg ul.tc.wf.fg a svg path {
+  fill: #2AD6FF !important;               /* blue icon */
+}
+
+/* Hover: transparent circle with white outline & white icon */
+#contact .vk.sg.hh.sm.yh.rq.i.pg ul.tc.wf.fg a:hover {
+  background-color: transparent !important;
+  border-color: #ffffff !important;
+}
+
+#contact .vk.sg.hh.sm.yh.rq.i.pg ul.tc.wf.fg a:hover svg path {
+  fill: #ffffff !important;
+}
+/* === Footer logo same size vibe as header === */
+.footer-logo img {
+  display: block;
+  height: 48px;   /* tweak 40–60px until you love it */
+  width: auto;
+}
+
+/* === Reduce spacing between referenced sections (too long currently) === */
+section.pj.vp.mr {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+section.gj.do.ir.hj.sp.jr.i.pg {
+  padding-bottom: 2rem !important;
+}
+
+/* === Footer right menu alignment === */
+.footer-nav {
+  gap: 1.5rem;
+}
+
+/* References logos (pj section) hover effect */
+.pj .wc a {
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+.pj .wc a:hover,
+.pj .wc a:focus {
+  transform: scale(1.08);
+  filter: drop-shadow(0 8px 15px rgba(42, 214, 255, 0.35));
+}
+
+/* Reduce gap between testimonial title/subtitle and slider content */
+section.hj.rp.hr .animate_top.bb.ze.rj.ki.xn.vq {
+  margin-bottom: 0.75rem !important;
+}
+
+section.hj.rp.hr .animate_top.bb.ze.rj.ki.xn.vq p {
+  margin-bottom: 0 !important;
+}
+
+/* Decrease vertical gap between Testimonials and References section */
+section.hj.rp.hr {
+  padding-bottom: 3rem !important;
+}
+
+section.pj.vp.mr {
+  padding-top: 2rem !important;
+}
+
+/* Desktop: keep items on one line and push to the right */
+@media (min-width: 1024px) {
+  .footer-nav {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+/* Mobile: stack links nicely with some spacing */
+@media (max-width: 1023px) {
+  .footer-nav {
+    align-items: flex-start;
+  }
+}
+.hero-photo-container {
+  margin-top: 20px; /* Increase/decrease as needed */
+}
+/* Smaller logo (header + footer) */
+.site-logo{
+  height: 36px;
+  width: auto;
+}
+@media (max-width: 768px){
+  .site-logo{ height: 28px; }
+}
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-header {
+  background: #ffffff;
+  border-bottom: 1px solid #ececec;
+}
+
+.about-header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 22px 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.about-header .header-logo img {
+  display: block;
+  height: 68px;
+  width: auto;
+}
+
+.about-nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.about-nav a {
+  text-decoration: none;
+  color: #2f2f2f;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.about-nav a.active {
+  color: #2bbcd3;
+}
+
+.about-btn {
+  white-space: nowrap;
+}
+
+/* Full-width hero image band */
+.about-hero-image {
+  width: 100%;
+  height: 340px;
+  background: linear-gradient(90deg, #d7d3cc 0%, #ece9e4 45%, #d5d1c9 100%);
+  overflow: hidden;
+/* Monika Souza name after logo*/
+
+  .brand-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.site-logo {
+  height: 42px; /* keep this as reference */
+  width: auto;
+}
+
+.brand-name {
+  font-size: 85px !important;   /* Make it much bigger */
+  font-weight: 700 !important;  /* Make it bold */
+  color: #1f2937;
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  letter-spacing: -0.5px;
 }
