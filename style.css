@@ -1395,7 +1395,7 @@ h1,  h2,  h3,  h4,  h5,  h6{
   fill: #D1D8E0;
 }
 .wh{
-  fill: #2AD6FF;
+  fill: #35a9d4;
 }
 .xh{
   fill: #79808A !important;
@@ -1804,7 +1804,7 @@ h1,  h2,  h3,  h4,  h5,  h6{
 }
 
 .ul:hover{
-  fill: #2AD6FF;
+  fill: #35a9d4;
 }
 
 .vl:hover{
@@ -1904,7 +1904,7 @@ h1,  h2,  h3,  h4,  h5,  h6{
 }
 
 .c:hover .mm{
-  fill: #2AD6FF;
+  fill: #35a9d4;
 }
 
 .b .nm{
@@ -2600,7 +2600,7 @@ header nav a {
 
 header nav a:hover,
 header nav a:focus {
-  color: #2AD6FF !important;
+  color: #35a9d4 !important;
 }
 
 
@@ -2615,7 +2615,7 @@ header nav a {
 /* Hover + focus */
 header nav a:hover,
 header nav a:focus {
-  color: #2AD6FF !important;
+  color: #35a9d4 !important;
 }
 
 /* Active states (cover theme variations) */
@@ -2629,7 +2629,7 @@ header nav a.text-purple,
 header nav a[class*="primary"],
 header nav a[class*="purple"],
 header nav li.ud-menu-active > a {
-  color: #2AD6FF !important;
+  color: #35a9d4 !important;
   font-weight: 600;
 }
 
@@ -2640,7 +2640,7 @@ header nav a::after {
   left: 0; bottom: -4px;
   width: 0%;
   height: 2px;
-  background-color: #2AD6FF;
+  background-color: #35a9d4;
   transition: width 0.3s ease;
   border-radius: 2px;
 }
@@ -2653,30 +2653,30 @@ header nav a.ud-menu-active::after {
 }
 
 /* Sticky header hover insurance */
-header.is-sticky nav a:hover { color: #2AD6FF !important; }
+header.is-sticky nav a:hover { color: #35a9d4 !important; }
 
 /* === Footer & Social Links === */
 footer a { color: #181C31; transition: color 0.3s ease; }
 footer a:hover,
-footer a:focus { color: #2AD6FF !important; }
+footer a:focus { color: #35a9d4 !important; }
 footer .social-icons a:hover svg path,
 footer .social-icons a:hover i {
-  color: #2AD6FF !important;
-  fill:  #2AD6FF !important;
+  color: #35a9d4 !important;
+  fill:  #35a9d4 !important;
 }
 
 /* === Override the theme's purple utility classes globally === */
-.mk, .mk:hover { color: #2AD6FF !important; }   /* active link color */
-.xl:hover, .xl:focus { color: #2AD6FF !important; } /* hover link color */
+.mk, .mk:hover { color: #35a9d4 !important; }   /* active link color */
+.xl:hover, .xl:focus { color: #35a9d4 !important; } /* hover link color */
 
 /* In case "Home" has the theme's .sc class, force it to brand blue */
 header nav a.sc,
 header nav .sc a,
 header nav li .sc,
 header nav li a.sc {
-  color: #2AD6FF !important;
+  color: #35a9d4 !important;
 }
-header nav a.sc::after { background-color: #2AD6FF !important; }
+header nav a.sc::after { background-color: #35a9d4 !important; }
 
 /* === Typography: Poppins (headings) + Inter (body) === */
 /* Body stays Inter */
@@ -3073,8 +3073,8 @@ section.gj.do.ir.hj.sp.jr.i.pg {
 
 button[aria-label="Scroll To Top"],
 a[aria-label="Scroll To Top"] {
-  background-color: #2AD6FF !important;   /* brand blue */
-  border: 2px solid #2AD6FF !important;
+  background-color: #35a9d4 !important;   /* brand blue */
+  border: 2px solid #35a9d4 !important;
   border-radius: 9999px !important;
 }
 
@@ -3121,7 +3121,7 @@ a[aria-label="Scroll To Top"]:hover {
 
 /* Brand-colored play button circle */
 .play-button {
-  background-color: #2AD6FF !important;      /* your brand blue */
+  background-color: #35a9d4 !important;      /* your brand blue */
   color: #ffffff !important;                 /* icon white */
   display: flex;
   justify-content: center;
@@ -3137,7 +3137,7 @@ a[aria-label="Scroll To Top"]:hover {
 }
 /* Monika brand: replace theme primary background color */
 .gh {
-  background-color: #2AD6FF !important;   /* your brand blue */
+  background-color: #35a9d4 !important;   /* your brand blue */
 }
 /* === Monika Brand – Primary Buttons (default + sticky) === */
 /* Use class="btn-primary" on any CTA (hero, header, contact, etc.) */
@@ -3157,9 +3157,9 @@ a.lk.dk.rg.tc.wf.xf._l.gi.hi.sh {
   text-transform: uppercase;
   font-size: 0.9rem;
 
-  background-color: #2AD6FF !important;   /* brand color */
+  background-color: #35a9d4 !important;   /* brand color */
   color: #ffffff !important;              /* white text */
-  border: 2px solid #2AD6FF !important;   /* brand outline */
+  border: 2px solid #35a9d4 !important;   /* brand outline */
 
   transition: all 0.25s ease;
 }
@@ -3170,8 +3170,8 @@ a.lk.dk.rg.tc.wf.xf._l.gi.hi.sh {
 a.lk.dk.rg.tc.wf.xf._l.gi.hi:hover,
 a.lk.dk.rg.tc.wf.xf._l.gi.hi.sh:hover {
   background-color: #ffffff !important;
-  color: #2AD6FF !important;
-  border-color: #2AD6FF !important;
+  color: #35a9d4 !important;
+  border-color: #35a9d4 !important;
   transform: translateY(-2px);
 }
 
@@ -3189,7 +3189,7 @@ header nav a {
 /* Hover + focus on menu links */
 header nav a:hover,
 header nav a:focus {
-  color: #2AD6FF !important;        /* brand color on hover */
+  color: #35a9d4 !important;        /* brand color on hover */
 }
 
 /* Active menu states */
@@ -3199,7 +3199,7 @@ header nav .current > a,
 header nav li.active > a,
 header nav a.ud-menu-active,
 header nav li.ud-menu-active > a {
-  color: #2AD6FF !important;
+  color: #35a9d4 !important;
   font-weight: 600;
 }
 /* === Contact section – social icon hover to Monika blue === */
@@ -3208,8 +3208,8 @@ header nav li.ud-menu-active > a {
 }
 
 #contact ul.tc.wf.fg a:hover {
-  background-color: #2AD6FF !important;  /* brand blue */
-  border-color: #2AD6FF !important;
+  background-color: #35a9d4 !important;  /* brand blue */
+  border-color: #35a9d4 !important;
 }
 
 /* make the icon inside turn white on hover */
@@ -3218,7 +3218,7 @@ header nav li.ud-menu-active > a {
 }
 /* === Contact – left card: brand background + white text === */
 #contact .contact-info-card {
-  background-color: #2AD6FF !important;  /* brand blue */
+  background-color: #35a9d4 !important;  /* brand blue */
   color: #ffffff !important;
   border-color: transparent !important;
 }
@@ -3252,7 +3252,7 @@ header nav li.ud-menu-active > a {
 
 /* Icon color inside the bubbles */
 #contact .contact-info-card ul.tc.wf.fg a svg path {
-  fill: #2AD6FF !important;               /* brand blue icon */
+  fill: #35a9d4 !important;               /* brand blue icon */
 }
 
 /* Hover: transparent circle with white line + white icon */
@@ -3267,7 +3267,7 @@ header nav li.ud-menu-active > a {
 /* === CONTACT LEFT COLUMN – BRAND BACKGROUND + WHITE TEXT === */
 /* Target the existing left card by its class combo */
 #contact .vk.sg.hh.sm.yh.rq.i.pg {
-  background-color: #2AD6FF !important;  /* brand blue */
+  background-color: #35a9d4 !important;  /* brand blue */
   color: #ffffff !important;
   border-color: transparent !important;
 }
@@ -3300,7 +3300,7 @@ header nav li.ud-menu-active > a {
 }
 
 #contact .vk.sg.hh.sm.yh.rq.i.pg ul.tc.wf.fg a svg path {
-  fill: #2AD6FF !important;               /* blue icon */
+  fill: #35a9d4 !important;               /* blue icon */
 }
 
 /* Hover: transparent circle with white outline & white icon */
@@ -3428,7 +3428,7 @@ section.pj.vp.mr {
 }
 
 .about-nav a.active {
-  color: #2bbcd3;
+  color: #35a9d4;
 }
 
 .about-btn {
@@ -3441,6 +3441,8 @@ section.pj.vp.mr {
   height: 340px;
   background: linear-gradient(90deg, #d7d3cc 0%, #ece9e4 45%, #d5d1c9 100%);
   overflow: hidden;
+  }
+
 /* Monika Souza name after logo*/
 
   .brand-link {
@@ -3456,9 +3458,9 @@ section.pj.vp.mr {
 }
 
 .brand-name {
-  font-size: 85px !important;   /* Make it much bigger */
+  font-size: 45px !important;   /* Make it much bigger */
   font-weight: 700 !important;  /* Make it bold */
-  color: #1f2937;
+  color: #35a9d4;
   line-height: 1.1;
   display: flex;
   align-items: center;
