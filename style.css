@@ -3504,3 +3504,169 @@ section.pj.vp.mr {
     flex-shrink: 0;
   }
 }
+
+/* ===== About Story Page ====================================================== */
+/* =START== */
+/* ===== About Intro ===== */
+
+.about-intro {
+  min-height: 60vh;                 /* controls vertical presence */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;          /* vertical center */
+  align-items: center;              /* horizontal center */
+  text-align: center;
+
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 20px;                  /* keep this LOW to avoid big gaps */
+}
+
+/* --- Small label (ABOUT MONIKA) --- */
+.about-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8a8a8a;
+
+  margin-bottom: 16px;
+}
+
+/* --- Main title (Welcome.) --- */
+.about-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 500;
+  line-height: 1.05;
+  color: #050505;
+
+  margin-bottom: 24px;
+}
+
+/* --- Supporting text --- */
+.about-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  line-height: 1.75;
+  color: #1d1d1d;
+
+  max-width: 640px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .about-intro {
+    min-height: 50vh;
+    padding: 0 22px;
+  }
+
+  .about-title {
+    font-size: 36px;
+  }
+
+  .about-text {
+    font-size: 17px;
+  }
+}
+
+/* ===== About Story (Photo ↔ Text) ===== */
+
+.about-story {
+  max-width: 1120px;
+  margin: 80px auto 120px;
+  padding: 0 32px;
+}
+
+/* --- Row layout --- */
+.story-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  margin-bottom: 96px;
+}
+
+/* --- Reverse row (text left / image right) --- */
+.story-row-reverse .story-photo {
+  order: 2;
+}
+
+.story-row-reverse .story-text-block {
+  order: 1;
+}
+
+/* --- Image --- */
+.story-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* --- Text block --- */
+.story-text-block {
+  max-width: 520px;
+}
+
+/* Small label (same as intro) */
+.story-text-block .about-eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8a8a8a;
+
+  margin-bottom: 14px;
+}
+
+/* Section title */
+.story-text-block h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(28px, 3.5vw, 44px);
+  line-height: 1.15;
+  color: #050505;
+
+  margin-bottom: 18px;
+}
+
+/* Paragraph */
+.story-text-block p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #1d1d1d;
+}
+
+@media (max-width: 768px) {
+  .about-story {
+    margin: 56px auto 80px;
+    padding: 0 22px;
+  }
+
+  .story-row,
+  .story-row-reverse {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-bottom: 72px;
+  }
+
+  /* Reset order on mobile */
+  .story-row-reverse .story-photo,
+  .story-row-reverse .story-text-block {
+    order: initial;
+  }
+
+  .story-text-block {
+    max-width: 100%;
+  }
+
+  .story-text-block h2 {
+    font-size: 30px;
+  }
+
+  .story-text-block p {
+    font-size: 16px;
+  }
+}
+
+
+/* =END== */
