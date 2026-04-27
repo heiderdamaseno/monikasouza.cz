@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>About | Monika Souza</title>
+
   <link rel="icon" href="favicon.ico">
   <link href="style.css" rel="stylesheet">
 </head>
@@ -30,10 +32,7 @@
   </header>
 
   <!-- ===== About Hero Image Band ===== -->
-  <section class="about-hero-image">
-    <!-- empty image block for now -->
-    <!-- later replace background with your real image -->
-  </section>
+  <section class="about-hero-image"></section>
 
   <!-- ===== About Intro ===== -->
   <section class="about-intro">
@@ -42,9 +41,117 @@
     <h1 class="about-title">Welcome.</h1>
 
     <p class="about-text">
-      I help bring structure, order, and long-term clarity to wealth —
-      so it can protect what matters and endure across generations.
+      “My ‘Why’ centers around guiding people on their journey to financial success. 
+      Just like my early days in ballet, I realized that seeking guidance was essential 
+      to excel. That’s why I’m here – to assist you in realizing your goals and making your 
+      dreams a reality. I believe in the power of dreams coming true.”
     </p>
   </section>
+
+  <!-- ===== About Story ===== -->
+  <section class="about-story">
+
+    <!-- Row 1: Photo / Text -->
+    <div class="story-row">
+      <div class="story-photo">
+        <img src="images/about-monika-1.jpg" alt="Monika Souza">
+      </div>
+
+      <div class="story-text-block">
+        <p class="about-eyebrow">MY STORY</p>
+        <h2>Early Steps</h2>
+        <p>
+          Transitioning from a career in ballet to the world of financial consulting might seem like an unexpected leap, 
+          but for me, it was a natural evolution driven by a profound desire to help others achieve
+           their aspirations. As a ballet dancer, I understood the significance of disciplined 
+           dedication, hard work, and expert guidance. I recognized that to excel in any field, 
+           whether it was dance or finance, seeking the right mentorship was crucial. 
+           Just as I had relied on my instructors to refine my ballet techniques, 
+           I realized that obtaining professional financial guidance was paramount 
+           to securing a successful financial future. This insight ignited my passion to bridge 
+           the gap between personal dreams and practical financial strategies.
+        </p>
+      </div>
+    </div>
+
+    <!-- Row 2: Text / Photo -->
+    <div class="story-row story-row-reverse">
+      <div class="story-photo">
+        <img src="images/about-monika-2.jpg" alt="Monika Souza working with clients">
+      </div>
+
+      <div class="story-text-block">
+        <p class="about-eyebrow">Transformation & Growth</p>
+        <h2>Structure brings confidence.</h2>
+        <p>
+          Embarking on this transformation was more than a career choice; it was a 
+          realization of my inherent purpose – to empower individuals in achieving their
+           dreams through sound financial planning. Just as ballet had taught me the 
+           importance of perseverance, I understood that navigating the complexities of 
+           finance demanded a similar commitment. I empathized with those who, like me, 
+           might lack expertise in this field. I wanted to provide the guidance I wished 
+           I had during my ballet days, but this time, in the realm of finances.
+        </p>
+      </div>
+    </div>
+
+    <!-- Row 3: Photo / Text -->
+    <div class="story-row">
+      <div class="story-photo">
+        <img src="images/about-monika-3.jpg" alt="Financial planning with Monika Souza">
+      </div>
+
+      <div class="story-text-block">
+        <p class="about-eyebrow">LONG-TERM VIEW</p>
+        <h2>The Journey.</h2>
+        <p>
+         Switching from ballet to financial consultancy was a profound journey that 
+         allowed me to blend my passion for guiding dreams with my understanding of the 
+         transformative power of expert advice. By aiding others in charting their financial 
+         course, I have found a meaningful way to make a positive impact on people’s lives,
+          ensuring that their dreams have the best chance of becoming reality.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== Footer Start ===== -->
+  <footer>
+    <div class="footer-container">
+
+      <!-- Footer Bottom -->
+      <div class="bh ch pm tc uf sf yo wf xf ap cg fp bj">
+        <div class="animate_top">
+          <ul class="tc wf gg">
+            <li><a href="PrivacyPolicy.html" class="xl">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="animate_top">
+          <p>&copy; 2026 Monika Souza. All rights reserved.</p>
+        </div>
+      </div>
+      <!-- Footer Bottom -->
+
+    </div>
+  </footer>
+  <!-- ===== Footer End ===== -->
+
+  <!-- ====== Back To Top Start ===== -->
+  <button
+    aria-label="Scroll To Top"
+    class="xc wf xf ie ld vg sr gh tr g sa ta _a"
+    @click="window.scrollTo({top: 0, behavior: 'smooth'})"
+    @scroll.window="scrollTop = (window.pageYOffset > 50) ? true : false"
+    :class="{ 'uc' : scrollTop }">
+    <svg class="uh se qd" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <path
+        d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192-192z" />
+    </svg>
+  </button>
+  <!-- ====== Back To Top End ===== -->
+
+  <script defer src="bundle.js"></script>
 </body>
 </html>
