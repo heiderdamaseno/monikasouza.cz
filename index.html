@@ -1,158 +1,485 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Monika Souza | New Website Coming Soon!! </title>
-		<meta charset="utf-8" />
-		<!-- Favicons and app icons -->
-<link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96.png">
-<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
-<link rel="manifest" href="assets/images/site.webmanifest">
-<link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
-<meta name="theme-color" content="#2AD6FF">
-<meta name="description" content="Monikasouza.cz — A new digital space by Monika Souza. Coming soon.">
-<meta name="keywords" content="Monika Souza, portfolio, coming soon, personal site">
-<meta name="author" content="Monika Souza">
-<meta property="og:title" content="Monika Souza">
-<meta property="og:description" content="We’re building something inspiring. Stay tuned!">
-<meta property="og:url" content="https://monikasouza.cz">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://monikasouza.cz/assets/images/favicon.ico">
-<meta name="theme-color" content="#2AD6FF">
+  <!DOCTYPE html>
+<html lang="en">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			body {
-				font-family: Arial, sans-serif;
-				background-color: #0f172a; /* dark background */
-				color: #f5f5f5;
-				margin: 0;
-				padding: 40px;
-				text-align: left; /* left aligned */
-			}
-			h1 {
-				color: #2AD6FF;
-				font-size: 2.5em;
-				margin-bottom: 0.2em;
-			}
-			p, a {
-				color: #2AD6FF;
-				text-decoration: none;
-				font-size: 1.1em;
-			}
-			a:hover {
-				text-decoration: underline;
-			}
-			form {
-				margin: 2em 0;
-				max-width: 300px;
-			}
-			input[type="email"] {
-				width: 100%;
-				padding: 10px;
-				margin-bottom: 10px;
-				border: 1px solid #ccc;
-				border-radius: 5px;
-				background-color: #1e293b;
-				color: #fff;
-			}
-			input[type="email"]::placeholder {
-				color: #ccc;
-			}
-			input[type="submit"] {
-				width: 100%;
-				padding: 10px;
-				background-color: #2AD6FF;
-				border: none;
-				border-radius: 5px;
-				color: #fff;
-				cursor: pointer;
-				font-weight: bold;
-			}
-			input[type="submit"]:hover {
-				background-color: #10bfe8;
-			}
-			.icons a {
-				color: #2AD6FF;
-				font-size: 1.6em;
-				margin-right: 10px;
-				transition: color 0.3s ease;
-			}
-			.icons a:hover {
-				color: #10bfe8;
-			}
-			footer {
-				margin-top: 3em;
-			}
-			ul {
-				list-style: none;
-				padding: 0;
-			}
-			ul.copyright {
-				font-size: 0.9em;
-				color: #aaa;
-			}
-		</style>
-	</head>
-	<body class="is-preload">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monika Souza - Wealth Strategy for Generations</title>
+  <link rel="icon" href="favicon.ico">
+  <link href="style.css" rel="stylesheet">
 
-		<!-- Header -->
-		<header id="header">
-			<h1>Monikasouza.cz</h1>
-			<p>We are working to better serve you.<br />
-			Soon a new website  <span style="color:#2AD6FF; font-weight:bold;">keep tuned</span>!</p>
-		</header>
+  <style>
+    /* Hero layout refinement */
+    .hero-copy {
+      margin-left: 80px;
+      max-width: 560px;
+    }
 
-		<!-- Signup Form -->
-		<form id="signup-form">
-			<input type="email" name="email" id="email" placeholder="Email Address" required />
-			<input type="submit" value="Sign Up" />
-		</form>
+    .hero-copy h1 {
+      max-width: 520px;
+    }
 
-		<script>
-		document.getElementById("signup-form").addEventListener("submit", function(e){
-			e.preventDefault();
+    .hero-subtext {
+      line-height: 1.45;
+      margin-top: 0.75rem;
+    }
 
-			const email = document.getElementById("email").value;
-			const data = { email: email };
+    @media (min-width: 1400px) {
+      .hero-copy {
+        margin-left: 120px;
+      }
+    }
 
-			fetch("https://script.google.com/macros/s/AKfycbxY-pSQ1Ecu-_xF9bptInViuVTF6DdOxhG6-VW8m25WX_HDvdwzoG2tV6dUN4rnG5mCIg/exec", {
-				method: "POST",
-				mode: "no-cors",
-				headers: {
-					"Content-Type": "application/json"
-				},
-				body: JSON.stringify(data)
-			})
-			.then(() => {
-				alert("✅ Thank you! Your email was submitted.");
-				document.getElementById("signup-form").reset();
-			})
-			.catch(err => {
-				alert("❌ There was an error submitting the form. Please try again.");
-				console.error(err);
-			});
-		});
-		</script>
+    @media (max-width: 991px) {
+      .hero-copy {
+        margin-left: 0;
+        max-width: 100%;
+      }
 
-		<!-- Footer -->
-		<footer id="footer">
-			<ul class="icons">
-				<li>
-					<a href="https://www.linkedin.com/in/monika-souza-efa-a22342187/" 
-					   class="icon brands fa-linkedin" target="_blank">
-						<span class="label">LinkedIn</span>
-					</a>
-				</li>
-			</ul>
-			<ul class="copyright">
-				<li>&copy; 2025</li>
-				<li>Created for: <a href="http://monikasouza.cz">Monika Souza</a></li>
-			</ul>
-		</footer>
+      .hero-copy h1 {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
 
-		<!-- Scripts -->
-		<script src="assets/js/main.js"></script>
+<body x-data="{ page: 'home', stickyMenu: false, navigationOpen: false, scrollTop: false }">
 
-	</body>
+  <!-- ===== Header Start ===== -->
+  <header class="g s r vd ya cj" :class="{ 'hh sm _k dj bl ll' : stickyMenu }"
+    @scroll.window="stickyMenu = (window.pageYOffset > 20) ? true : false">
+    <div class="bb ze ki xn 2xl:ud-px-0 oo wf yf i">
+      <div class="vd to/4 tc wf yf">
+        <a href="index.html" class="header-logo">
+          <img src="images/Logo_monika-financial-adviser-brno-czech-republic.svg" alt="Monika Souza Logo" />
+          <span class="brand-name">Monika Souza</span>
+</a>
+  
+
+        <!-- Hamburger Toggle BTN -->
+        <button class="po rc" @click="navigationOpen = !navigationOpen">
+          <span class="rc i pf re pd">
+            <span class="du-block h q vd yc">
+              <span class="rc i r s eh um tg te rd eb ml jl dl" :class="{ 'ue el': !navigationOpen }"></span>
+              <span class="rc i r s eh um tg te rd eb ml jl fl" :class="{ 'ue qr': !navigationOpen }"></span>
+              <span class="rc i r s eh um tg te rd eb ml jl gl" :class="{ 'ue hl': !navigationOpen }"></span>
+            </span>
+            <span class="du-block h q vd yc lf">
+              <span class="rc eh um tg ml jl el h na r ve yc" :class="{ 'sd dl': !navigationOpen }"></span>
+              <span class="rc eh um tg ml jl qr h s pa vd rd" :class="{ 'sd rr': !navigationOpen }"></span>
+            </span>
+          </span>
+        </button>
+        <!-- Hamburger Toggle BTN -->
+      </div>
+
+      <div class="vd wo/4 sd qo f ho oo wf yf header-right"
+        :class="{ 'd hh rm sr td ud qg ug jc yh': navigationOpen }">
+        <nav>
+          <ul class="tc _o sf yo cg ep">
+            <li><a href="index.html" class="xl" :class="{ 'mk': page === 'home' }">Home</a></li>
+            <li><a href="about.html" class="xl">About</a></li>
+            <li><a href="How I Work.html" class="xl">How I Work</a></li>
+            <li><a href="Insights.html" class="xl">Insights</a></li>
+            <li><a href="QA.html" class="xl">FAQ</a></li>
+          </ul>
+        </nav>
+
+        <div class="tc wf ig pb no">
+          <a href="#contact"
+            :class="{ 'hh/[0.15]' : page === 'home', 'sh' : page === 'home' && stickyMenu }"
+            class="btn-primary lk dk rg tc wf xf _l gi hi">
+            Start a conversation
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ===== Header End ===== -->
+
+  <main>
+    <!-- ===== Hero Start ===== -->
+    <section class="gj do ir hj sp jr i pg">
+      <!-- Hero Images -->
+      <div class="xc fn zd/2 2xl:ud-w-187.5 bd 2xl:ud-h-171.5 h q r hero-photo-container">
+        <img src="images/hero.png" alt="Woman" class="ua monika-photo" />
+      </div>
+
+      <!-- Hero Content -->
+      <div class="bb ze ki xn 2xl:ud-px-0">
+        <div class="tc _o">
+          <div class="animate_left jn/2 hero-copy">
+            <h1 class="fk vj zp or kk wm wb">
+              Independent Wealth Strategy for Generations.
+            </h1>
+
+            <p class="fq hero-subtext">
+              EFP-certified. EU-aligned.
+              <br><br>
+              Bringing structure and order to your wealth—so it holds and endures.
+            </p>
+
+            <div class="tc tf yo zf mb">
+              <a href="#contact" class="btn-primary">Start a conversation</a>
+              <span class="tc sf"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== Hero End ===== -->
+  </main>
+</body>
+
 </html>
+
+
+      <!-- ===== About Start ===== -->
+      <section class="ji gp uq 2xl:ud-py-35 pg">
+        <div class="bb ze ki xn wq">
+          <div class="tc wf gg qq">
+            <!-- About Images -->
+            <div class="animate_left xc gn gg jn/2 i">
+              <div>
+                <img src="images/about-01.png" alt="About" class="ib" />
+                <img src="images/about-02.png" alt="About" />
+              </div>
+              <div>
+                
+                <img src="images/about-03.png" alt="About" class="ob gb" />
+                
+              </div>
+            </div>
+
+            <!-- About Content -->
+            <div class="animate_right jn/2">
+              <h4 class="ek yj mk gb">Before we work together </h4>
+              <h2 class="fk vj zp pr kk wm qb">Working together requires alignment. </h2>
+              <p class="uo">This short introduction will help you understand how I think, how I work, and what I expect from the relationship.  
+
+  <a href="https://www.youtube.com/watch?v=sIYKr8s8S2Q" data-fslightbox class="vc wf hg mb">
+    <span class="tc wf xf be dd rg i gh ua">
+      <span class="nf h vc yc vd rg gh qk -ud-z-1"></span>
+      <img src="images/icon-play.svg" alt="Play" />
+    </span>  <br>
+    <span class="kk">A brief introduction - 2 minutes</span>
+  </a>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== About End ===== -->
+      
+    <!-- ===== Projects Start ===== -->
+      <section class="pg pj vp mr oj wp nr">
+        
+
+      <!-- ===== Testimonials Start ===== -->
+      <section class="hj rp hr">
+        <!-- Section Title Start -->
+        <div
+          x-data="{ sectionTitle: `What my clients are saying`, sectionTitleText: `Real stories of financial transformation and success.`}">
+          <div class="animate_top bb ze rj ki xn vq">
+            <h2 x-text="sectionTitle" class="fk vj pr kk wm on/5 gq/2 bb _b">
+            </h2>
+            <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
+          </div>
+
+
+        </div>
+        <!-- Section Title End -->
+
+        <div class="bb ze ki xn ar">
+          <div class="animate_top jb cq">
+            <!-- Slider main container -->
+            <div class="swiper testimonial-01">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+    <!-- Slide 1 -->
+    <div class="swiper-slide">
+      <div class="i hh rm sg vk xm bi qj">
+        <!-- Border Shape -->
+        <span class="rc je md/2 gh xg h q r"></span>
+        <span class="rc je md/2 mh yg h q p"></span>
+
+        <div class="tc sf rn tn un zf dp">
+        <img class="bf" src="images/Testemonial_Ellen and Rodrigo_Monika financial services Brno Czech Republic.png" alt="Ellen & Rodrigo" />
+
+          <div>
+            <img src="images/icon-quote.svg" alt="Quote" />
+            <p class="ek ik xj _p kc fb">
+              Monika is a very professional financial advisor. 
+              She not only helped us establish successful investments but also to close a nice deal on a realty mortgage. 
+              I definitely recommend her services!
+            </p>
+            <div class="tc yf vf">
+              <div>
+                <span class="rc ek xj kk wm zb">Ellen & Rodrigo Dutra</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✅ New Slide 2 -->
+    <div class="swiper-slide">
+      <div class="i hh rm sg vk xm bi qj">
+        <!-- Border Shape -->
+        <span class="rc je md/2 gh xg h q r"></span>
+        <span class="rc je md/2 mh yg h q p"></span>
+
+        <div class="tc sf rn tn un zf dp">
+          <img class="bf" src="images/Testemonial_Anna_Monika financial services Brno Czech Republic.png" alt="User" />
+
+          <div>
+            <img src="images/icon-quote.svg" alt="Quote" />
+            <p class="ek ik xj _p kc fb">
+              Working with Monika has completely changed the way I handle my finances. 
+              Her clarity, empathy, and strategy gave me real confidence and tangible results. 
+              I finally feel in control of my money and future.
+            </p>
+            <div class="tc yf vf">
+              <div>
+                <span class="rc ek xj kk wm zb">Anna Novak</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+              <!-- If we need navigation -->
+              <div class="tc wf xf fg jb">
+                <div class="swiper-button-prev c tc wf xf ie ld rg _g dh pf ml vr hh rm tl zm rl ym">
+                  <svg class="th lm" width="14" height="14" viewBox="0 0 14 14" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M3.52366 7.83336L7.99366 12.3034L6.81533 13.4817L0.333663 7.00002L6.81533 0.518357L7.99366 1.69669L3.52366 6.16669L13.667 6.16669L13.667 7.83336L3.52366 7.83336Z"
+                      fill="" />
+                  </svg>
+                </div>
+                <div class="swiper-button-next c tc wf xf ie ld rg _g dh pf ml vr hh rm tl zm rl ym">
+                  <svg class="th lm" width="14" height="14" viewBox="0 0 14 14" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10.4763 6.16664L6.00634 1.69664L7.18467 0.518311L13.6663 6.99998L7.18467 13.4816L6.00634 12.3033L10.4763 7.83331H0.333008V6.16664H10.4763Z"
+                      fill="" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Testimonials End ===== -->
+      <!-- ===== Clients Start ===== -->
+      <section class="pj vp mr">
+        <!-- Section Title Start -->
+        <div
+          x-data="{ sectionTitle: `References`, sectionTitleText: `Where I have been published, collaborated or spoke.`}">
+          <div class="animate_top bb ze rj ki xn vq">
+            <h2 x-text="sectionTitle" class="fk vj pr kk wm on/5 gq/2 bb _b">
+            </h2>
+            <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
+          </div>
+
+
+        </div>
+        <!-- Section Title End -->
+
+        <div class="bb ze ah ch pm hj xp ki xn 2xl:ud-px-49 bc">
+          <div class="wc rf qn zf cp kq xf wf">
+            <a href="#" class="rc animate_top">
+              <img class="th wl ml il zl om" src="images/brand-light-01.svg" alt="Clients" />
+            
+            </a>
+            <a href="https://www.brnoexpatcentre.eu/events/33243/" target="_blank" rel="noopener" class="rc animate_top">
+              <img class="tk ml il zl om" src="images/brand-light-02.svg" alt="Clients" />
+              
+            </a>
+            <a href="https://www.heroine.cz/spolecnost/2377-spicky-za-lodicky-monika-souza-zvladla-karieru-baletky-i-uspesne-financni-poradkyne" target="_blank" rel="noopener" class="rc animate_top">
+              <img class="tk ml il zl om" src="images/brand-light-03.svg" alt="Clients" />
+             
+            </a>
+            <a href="#" class="rc animate_top">
+              <img class="tk ml il zl om" src="images/brand-light-04.svg" alt="Clients" />
+           
+            </a>
+            <a href="#" class="rc animate_top">
+              <img class="tk ml il zl om" src="images/brand-light-05.svg" alt="Clients" />
+           
+            </a>
+            <a href="#" class="rc animate_top">
+              <img class="tk ml il zl om" src="images/Logo_monika-financial-adviser-brno-czech-republic.svg" alt="Clients" />
+                      </a>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Clients End ===== -->
+
+  <!-- ===== Contact Start ===== -->
+  <section id="contact" class="i pg fh rm ji gp uq">
+    <!-- Bg Shapes -->
+
+
+    <!-- Section Title Start -->
+    <div x-data="{ sectionTitle: `Contact`, sectionTitleText: `Let me know how can I help you achieve your financial goals.`}">
+      <div class="animate_top bb ze rj ki xn vq">
+        <h2 x-text="sectionTitle" class="fk vj pr kk wm on/5 gq/2 bb _b">
+        </h2>
+        <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
+      </div>
+    </div>
+    <!-- Section Title End -->
+
+    <div class="i va bb ye ki xn wq jb mo">
+      <div class="tc uf sn tf rn un zf xl:gap-10">
+        <div class="animate_top w-full mn/5 to/3 vk sg hh sm yh rq i pg contact-info-card">
+          <!-- Bg Shapes -->
+      
+          <div class="fb">
+            <h4 class="wj kk wm cc">Email Address</h4>
+            <p><a href="mailto:Monikasouza@partners.cz">Monikasouza@partners.cz</a></p>
+          </div>
+          <div class="fb">
+            <h4 class="wj kk wm cc">Address</h4>
+            <p>Nové sady 988, 602 00 Brno-střed.</p>
+          </div>
+          <div class="fb">
+            <h4 class="wj kk wm cc">Phone Number</h4>
+            <p><a href="tel:+420777223684">+420 777 223 684</a></p>
+          </div>
+
+          <span class="rc nd rh tm lc fb"></span>
+
+          <div>
+            <ul class="tc wf fg">
+              <li>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="c tc wf xf ie ld rg ml il tl">
+                  <svg class="th lm ml il" width="19" height="18" viewBox="0 0 19 18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M4.36198 2.58327C4.36174 3.0695 4.16835 3.53572 3.82436 3.87937C3.48037 4.22301 3.01396 4.41593 2.52773 4.41569C2.0415 4.41545 1.57528 4.22206 1.23164 3.87807C0.887991 3.53408 0.69507 3.06767 0.695313 2.58144C0.695556 2.09521 0.888943 1.62899 1.23293 1.28535C1.57692 0.941701 2.04333 0.748781 2.52956 0.749024C3.01579 0.749267 3.48201 0.942654 3.82566 1.28664C4.1693 1.63063 4.36222 2.09704 4.36198 2.58327ZM4.41698 5.77327H0.750313V17.2499H4.41698V5.77327ZM10.2103 5.77327H6.56198V17.2499H10.1736V11.2274C10.1736 7.87244 14.5461 7.56077 14.5461 11.2274V17.2499H18.167V9.98077C18.167 4.32494 11.6953 4.53577 10.1736 7.31327L10.2103 5.77327Z"
+                      fill="" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="animate_top w-full nn/5 vo/3 vk sg hh sm yh tq">
+          <form action="#" method="POST">
+            <div class="tc sf yo ap zf ep qb">
+              <div class="vd to/2">
+                <label class="rc ac" for="fullname">Name*</label>
+                <input type="text" name="fullname" id="fullname" placeholder="Lenka Wonder"
+                  class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" required />
+              </div>
+
+              <div class="vd to/2">
+                <label class="rc ac" for="email">Email address*</label>
+                <input type="email" name="email" id="email" placeholder="example@gmail.com"
+                  class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" required />
+              </div>
+            </div>
+
+            <div class="tc sf yo ap zf ep qb">
+              <div class="vd to/2">
+                <label class="rc ac" for="phone">Phone number*</label>
+                <input type="text" name="phone" id="phone" placeholder="+420 177 334 343"
+                  class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" required />
+              </div>
+            </div>
+
+            <div class="fb">
+              <label class="rc ac" for="message">How can I help you?*</label>
+              <textarea placeholder="Message" rows="4" name="message" id="message"
+                class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 ci" required></textarea>
+            </div>
+
+            <div class="fb">
+              <label class="rc ac" for="consent">
+                <input type="checkbox" id="consent" name="consent" required />
+                I agree to the processing of personal data
+              </label>
+            </div>
+
+            <div class="tc xf">
+              <button class="btn-primary lk dk rg tc wf xf _l gi hi">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== Contact End ===== -->
+
+
+      
+    </main>
+    <!-- ===== Footer Start ===== -->
+    <footer>
+      <div class="bb ze ki xn 2xl:ud-px-0">
+              <!-- Footer Top -->
+        <div class="ji gp">
+          <div class="tc uf ap gg fp">
+            <!-- Left: logo (smaller, like top menu) -->
+            <div class="animate_top zd/2 to/4">
+              <a href="index.html" class="footer-logo">
+                <img src="images/Logo_monika-financial-adviser-brno-czech-republic.svg" alt="Logo" class="om" />
+              
+              </a>
+            </div>
+
+            <!-- Right: single line menu + newsletter CTA -->
+            <div class="animate_top vd ro tc sf lg:yo lg:tn lg:un gg footer-nav">
+              <a href="index.html" class="sc xl">Home</a>
+            <a href="about.html" class="sc xl">About</a>
+            <a href="myteam.html" class="sc xl">How I Work</a>
+            <a href="articles.html" class="sc xl">Insights</a>
+            <a href="QA.html" class="sc xl">FAQ</a>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Top -->
+
+
+        <!-- Footer Bottom -->
+        <div class="bh ch pm tc uf sf yo wf xf ap cg fp bj">
+          <div class="animate_top">
+            <ul class="tc wf gg">
+              <li><a href="PrivacyPolicy.html" class="xl">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="animate_top">
+            <p>&copy; 2026 Monika Souza. All rights reserved.</p>
+          </div>
+        </div>
+        <!-- Footer Bottom -->
+      </div>
+    </footer>
+
+    <!-- ===== Footer End ===== -->
+
+    <!-- ====== Back To Top Start ===== -->
+    <button 
+    aria-label="Scroll To Top" class="xc wf xf ie ld vg sr gh tr g sa ta _a" @click="window.scrollTo({top: 0, behavior: 'smooth'})"
+      @scroll.window="scrollTop = (window.pageYOffset > 50) ? true : false" :class="{ 'uc' : scrollTop }">
+      <svg class="uh se qd" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path
+          d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z" />
+      </svg>
+    </button>
+
+    <!-- ====== Back To Top End ===== -->
+
+    <script defer src="bundle.js"></script>
+  </body>
+
+  </html>
