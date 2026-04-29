@@ -3072,7 +3072,7 @@ header.g + section,
 header.g + main,
 header.g + script + section,
 header.g + script + main {
-  margin-top: 140px;
+  margin-top: 10px;
 }
 
 /* === SCROLL-TO-TOP BUTTON BRAND COLORS (MONIKA BLUE) === */
