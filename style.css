@@ -3068,6 +3068,13 @@ section.gj.do.ir.hj.sp.jr.i.pg {
   }
 }
 
+header.g + section,
+header.g + main,
+header.g + script + section,
+header.g + script + main {
+  margin-top: 140px;
+}
+
 /* === SCROLL-TO-TOP BUTTON BRAND COLORS (MONIKA BLUE) === */
 /* Works whether it's a <button> or <a>, as long as it has aria-label="Scroll To Top" */
 
