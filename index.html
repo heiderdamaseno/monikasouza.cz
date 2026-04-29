@@ -1,11 +1,13 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Monika Souza - Wealth Strategy for Generations</title>
+
   <link rel="icon" href="favicon.ico">
   <link href="style.css" rel="stylesheet">
 
@@ -54,8 +56,7 @@
         <a href="index.html" class="header-logo">
           <img src="images/Logo_monika-financial-adviser-brno-czech-republic.svg" alt="Monika Souza Logo" />
           <span class="brand-name">Monika Souza</span>
-</a>
-  
+        </a>
 
         <!-- Hamburger Toggle BTN -->
         <button class="po rc" @click="navigationOpen = !navigationOpen">
@@ -78,9 +79,9 @@
         :class="{ 'd hh rm sr td ud qg ug jc yh': navigationOpen }">
         <nav>
           <ul class="tc _o sf yo cg ep">
-            <li><a href="index.html" class="xl active" :class="{ 'mk': page === 'home' }">Home</a></li>
+            <li><a href="index.html" class="xl" :class="{ 'mk': page === 'home' }">Home</a></li>
             <li><a href="about.html" class="xl">About</a></li>
-             <!-- ===== <li><a href="How I Work.html" class="xl">How I Work</a></li>= -->
+            <!-- <li><a href="How I Work.html" class="xl">How I Work</a></li> -->
             <li><a href="Insights.html" class="xl">Insights</a></li>
             <li><a href="FAQ.html" class="xl">FAQ</a></li>
           </ul>
@@ -99,14 +100,13 @@
   <!-- ===== Header End ===== -->
 
   <main>
+
     <!-- ===== Hero Start ===== -->
     <section class="gj do ir hj sp jr i pg">
-      <!-- Hero Images -->
       <div class="xc fn zd/2 2xl:ud-w-187.5 bd 2xl:ud-h-171.5 h q r hero-photo-container">
         <img src="images/hero.png" alt="Woman" class="ua monika-photo" />
       </div>
 
-      <!-- Hero Content -->
       <div class="bb ze ki xn 2xl:ud-px-0">
         <div class="tc _o">
           <div class="animate_left jn/2 hero-copy">
@@ -129,357 +129,474 @@
       </div>
     </section>
     <!-- ===== Hero End ===== -->
+
+    <!-- ===== About Start ===== -->
+    <section class="ji gp uq 2xl:ud-py-35 pg">
+      <div class="bb ze ki xn wq">
+        <div class="tc wf gg qq">
+
+          <div class="animate_left xc gn gg jn/2 i">
+            <div>
+              <img src="images/about-01.png" alt="About" class="ib" />
+              <img src="images/about-02.png" alt="About" />
+            </div>
+            <div>
+              <img src="images/about-03.png" alt="About" class="ob gb" />
+            </div>
+          </div>
+
+          <div class="animate_right jn/2">
+            <h4 class="ek yj mk gb">Before we work together</h4>
+            <h2 class="fk vj zp pr kk wm qb">Working together requires alignment.</h2>
+
+            <p class="uo">
+              This short introduction will help you understand how I think, how I work, and what I expect from the relationship.
+            </p>
+
+            <a href="https://www.youtube.com/watch?v=sIYKr8s8S2Q" data-fslightbox class="vc wf hg mb">
+              <span class="tc wf xf be dd rg i gh ua">
+                <span class="nf h vc yc vd rg gh qk -ud-z-1"></span>
+                <img src="images/icon-play.svg" alt="Play" />
+              </span>
+              <br>
+              <span class="kk">A brief introduction - 2 minutes</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ===== About End ===== -->
+
+    <!-- ===== Testimonials Start ===== -->
+    <section class="hj rp hr">
+
+      <div x-data="{ sectionTitle: `What my clients are saying`, sectionTitleText: `Real stories of financial transformation and success.`}">
+        <div class="animate_top bb ze rj ki xn vq">
+          <h2 x-text="sectionTitle" class="fk vj pr kk wm on/5 gq/2 bb _b"></h2>
+          <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
+        </div>
+      </div>
+
+      <div class="bb ze ki xn ar">
+        <div class="animate_top jb cq">
+
+          <div class="swiper testimonial-01">
+            <div class="swiper-wrapper">
+
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <div class="i hh rm sg vk xm bi qj">
+                  <span class="rc je md/2 gh xg h q r"></span>
+                  <span class="rc je md/2 mh yg h q p"></span>
+
+                  <div class="tc sf rn tn un zf dp">
+                    <img class="bf" src="images/Testemonial_Ellen and Rodrigo_Monika financial services Brno Czech Republic.png" alt="Ellen & Rodrigo" />
+
+                    <div>
+                      <img src="images/icon-quote.svg" alt="Quote" />
+                      <p class="ek ik xj _p kc fb">
+                        Monika is a very professional financial advisor.
+                        She not only helped us establish successful investments but also to close a nice deal on a realty mortgage.
+                        I definitely recommend her services!
+                      </p>
+
+                      <div class="tc yf vf">
+                        <div>
+                          <span class="rc ek xj kk wm zb">Ellen & Rodrigo Dutra</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <div class="i hh rm sg vk xm bi qj">
+                  <span class="rc je md/2 gh xg h q r"></span>
+                  <span class="rc je md/2 mh yg h q p"></span>
+
+                  <div class="tc sf rn tn un zf dp">
+                    <img class="bf" src="images/Testemonial_Anna_Monika financial services Brno Czech Republic.png" alt="Anna Novak" />
+
+                    <div>
+                      <img src="images/icon-quote.svg" alt="Quote" />
+                      <p class="ek ik xj _p kc fb">
+                        Working with Monika has completely changed the way I handle my finances.
+                        Her clarity, empathy, and strategy gave me real confidence and tangible results.
+                        I finally feel in control of my money and future.
+                      </p>
+
+                      <div class="tc yf vf">
+                        <div>
+                          <span class="rc ek xj kk wm zb">Anna Novak</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 - Placeholder -->
+              <div class="swiper-slide">
+                <div class="i hh rm sg vk xm bi qj">
+                  <span class="rc je md/2 gh xg h q r"></span>
+                  <span class="rc je md/2 mh yg h q p"></span>
+
+                  <div class="tc sf rn tn un zf dp">
+                    <img class="bf" src="images/optimized/Igor.jpg" alt="Client review" />
+
+                    <div>
+                      <img src="images/icon-quote.svg" alt="Quote" />
+                      <p class="ek ik xj _p kc fb">
+                       Monika handled our mortgage process from start to finish with dedication and precision. 
+                       She worked closely with local banks and kept us informed throughout, 
+                       making the entire experience smooth and stress-free.
+                      </p>
+
+                      <div class="tc yf vf">
+                        <div>
+                          <span class="rc ek xj kk wm zb">Igor Valle</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 4 - Placeholder -->
+              <div class="swiper-slide">
+                <div class="i hh rm sg vk xm bi qj">
+                  <span class="rc je md/2 gh xg h q r"></span>
+                  <span class="rc je md/2 mh yg h q p"></span>
+
+                  <div class="tc sf rn tn un zf dp">
+                    <img class="bf" src="images/optimized/Carolina.jpg" alt="Client review" />
+
+                    <div>
+                      <img src="images/icon-quote.svg" alt="Quote" />
+                      <p class="ek ik xj _p kc fb">
+                      Monika guided me through the entire mortgage process with clarity and confidence. As an expat, 
+                      I felt fully supported at every step, 
+                      from bank communication to final approval. What seemed overwhelming became smooth and straightforward.
+                      </p>
+
+                      <div class="tc yf vf">
+                        <div>
+                          <span class="rc ek xj kk wm zb">Carolina Barreto</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 5 - Placeholder -->
+              <div class="swiper-slide">
+                <div class="i hh rm sg vk xm bi qj">
+                  <span class="rc je md/2 gh xg h q r"></span>
+                  <span class="rc je md/2 mh yg h q p"></span>
+
+                  <div class="tc sf rn tn un zf dp">
+                    <img class="bf" src="images/optimized/Julia.jpg" alt="Client review" />
+
+                    <div>
+                      <img src="images/icon-quote.svg" alt="Quote" />
+                      <p class="ek ik xj _p kc fb">
+                        I’ve worked with Monika for over 7 years, and she has always adapted financial planning to my life changes. She clearly explains options, 
+                        respects my decisions, and combines professionalism with a truly human approach.
+                      </p>
+
+                      <div class="tc yf vf">
+                        <div>
+                          <span class="rc ek xj kk wm zb">Júlia Hálová</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 6 - Placeholder -->
+              <div class="swiper-slide">
+                <div class="i hh rm sg vk xm bi qj">
+                  <span class="rc je md/2 gh xg h q r"></span>
+                  <span class="rc je md/2 mh yg h q p"></span>
+
+                  <div class="tc sf rn tn un zf dp">
+                    <img class="bf" src="images/optimized/Pinnki.jpg" alt="Client review" />
+
+                    <div>
+                      <img src="images/icon-quote.svg" alt="Quote" />
+                      <p class="ek ik xj _p kc fb">
+                        Monika made the mortgage process simple while also helping us improve our overall financial planning. 
+                        She is always available, 
+                        explains everything clearly, and genuinely cares about her clients’ confidence and success.
+                      </p>
+
+                      <div class="tc yf vf">
+                        <div>
+                          <span class="rc ek xj kk wm zb">Pinnki Segar</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 7 - Placeholder -->
+              <div class="swiper-slide">
+                <div class="i hh rm sg vk xm bi qj">
+                  <span class="rc je md/2 gh xg h q r"></span>
+                  <span class="rc je md/2 mh yg h q p"></span>
+
+                  <div class="tc sf rn tn un zf dp">
+                    <img class="bf" src="images/optimized/Jonathas.jpg" alt="Client review" />
+
+                    <div>
+                      <img src="images/icon-quote.svg" alt="Quote" />
+                      <p class="ek ik xj _p kc fb">
+                        Monika helped my family bring structure and clarity to our finances. 
+                        Her attention to detail, clear communication, and personalized approach gave us a solid plan and confidence for the future.
+                      </p>
+
+                      <div class="tc yf vf">
+                        <div>
+                          <span class="rc ek xj kk wm zb">Jonathas Ribeiro</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Navigation -->
+            <div class="tc wf xf fg jb">
+              <div class="swiper-button-prev c tc wf xf ie ld rg _g dh pf ml vr hh rm tl zm rl ym">
+                <svg class="th lm" width="14" height="14" viewBox="0 0 14 14" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M3.52366 7.83336L7.99366 12.3034L6.81533 13.4817L0.333663 7.00002L6.81533 0.518357L7.99366 1.69669L3.52366 6.16669L13.667 6.16669L13.667 7.83336L3.52366 7.83336Z"
+                    fill="" />
+                </svg>
+              </div>
+
+              <div class="swiper-button-next c tc wf xf ie ld rg _g dh pf ml vr hh rm tl zm rl ym">
+                <svg class="th lm" width="14" height="14" viewBox="0 0 14 14" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10.4763 6.16664L6.00634 1.69664L7.18467 0.518311L13.6663 6.99998L7.18467 13.4816L6.00634 12.3033L10.4763 7.83331H0.333008V6.16664H10.4763Z"
+                    fill="" />
+                </svg>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== Testimonials End ===== -->
+
+    <!-- ===== Clients Start ===== -->
+    <section class="pj vp mr">
+      <div x-data="{ sectionTitle: `References`, sectionTitleText: `Where I have been published, collaborated or spoke.`}">
+        <div class="animate_top bb ze rj ki xn vq">
+          <h2 x-text="sectionTitle" class="fk vj pr kk wm on/5 gq/2 bb _b"></h2>
+          <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
+        </div>
+      </div>
+
+      <div class="bb ze ah ch pm hj xp ki xn 2xl:ud-px-49 bc">
+        <div class="wc rf qn zf cp kq xf wf">
+
+          <a href="#" class="rc animate_top">
+            <img class="th wl ml il zl om" src="images/brand-light-01.svg" alt="Clients" />
+          </a>
+
+          <a href="https://www.brnoexpatcentre.eu/events/33243/" target="_blank" rel="noopener" class="rc animate_top">
+            <img class="tk ml il zl om" src="images/brand-light-02.svg" alt="Clients" />
+          </a>
+
+          <a href="https://www.heroine.cz/spolecnost/2377-spicky-za-lodicky-monika-souza-zvladla-karieru-baletky-i-uspesne-financni-poradkyne" target="_blank" rel="noopener" class="rc animate_top">
+            <img class="tk ml il zl om" src="images/brand-light-03.svg" alt="Clients" />
+          </a>
+
+          <a href="#" class="rc animate_top">
+            <img class="tk ml il zl om" src="images/brand-light-04.svg" alt="Clients" />
+          </a>
+
+          <a href="#" class="rc animate_top">
+            <img class="tk ml il zl om" src="images/brand-light-05.svg" alt="Clients" />
+          </a>
+
+          <a href="#" class="rc animate_top">
+            <img class="tk ml il zl om" src="images/Logo_monika-financial-adviser-brno-czech-republic.svg" alt="Clients" />
+          </a>
+
+        </div>
+      </div>
+    </section>
+    <!-- ===== Clients End ===== -->
+
+    <!-- ===== Contact Start ===== -->
+    <section id="contact" class="i pg fh rm ji gp uq">
+
+      <div x-data="{ sectionTitle: `Contact`, sectionTitleText: `Let me know how can I help you achieve your financial goals.`}">
+        <div class="animate_top bb ze rj ki xn vq">
+          <h2 x-text="sectionTitle" class="fk vj pr kk wm on/5 gq/2 bb _b"></h2>
+          <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
+        </div>
+      </div>
+
+      <div class="i va bb ye ki xn wq jb mo">
+        <div class="tc uf sn tf rn un zf xl:gap-10">
+
+          <div class="animate_top w-full mn/5 to/3 vk sg hh sm yh rq i pg contact-info-card">
+
+            <div class="fb">
+              <h4 class="wj kk wm cc">Email Address</h4>
+              <p><a href="mailto:Monikasouza@partners.cz">Monikasouza@partners.cz</a></p>
+            </div>
+
+            <div class="fb">
+              <h4 class="wj kk wm cc">Address</h4>
+              <p>Nové sady 988, 602 00 Brno-střed.</p>
+            </div>
+
+            <div class="fb">
+              <h4 class="wj kk wm cc">Phone Number</h4>
+              <p><a href="tel:+420777223684">+420 777 223 684</a></p>
+            </div>
+
+            <span class="rc nd rh tm lc fb"></span>
+
+            <div>
+              <ul class="tc wf fg">
+                <li>
+                  <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="c tc wf xf ie ld rg ml il tl">
+                    <svg class="th lm ml il" width="19" height="18" viewBox="0 0 19 18" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M4.36198 2.58327C4.36174 3.0695 4.16835 3.53572 3.82436 3.87937C3.48037 4.22301 3.01396 4.41593 2.52773 4.41569C2.0415 4.41545 1.57528 4.22206 1.23164 3.87807C0.887991 3.53408 0.69507 3.06767 0.695313 2.58144C0.695556 2.09521 0.888943 1.62899 1.23293 1.28535C1.57692 0.941701 2.04333 0.748781 2.52956 0.749024C3.01579 0.749267 3.48201 0.942654 3.82566 1.28664C4.1693 1.63063 4.36222 2.09704 4.36198 2.58327ZM4.41698 5.77327H0.750313V17.2499H4.41698V5.77327ZM10.2103 5.77327H6.56198V17.2499H10.1736V11.2274C10.1736 7.87244 14.5461 7.56077 14.5461 11.2274V17.2499H18.167V9.98077C18.167 4.32494 11.6953 4.53577 10.1736 7.31327L10.2103 5.77327Z"
+                        fill="" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="animate_top w-full nn/5 vo/3 vk sg hh sm yh tq">
+            <form action="#" method="POST">
+
+              <div class="tc sf yo ap zf ep qb">
+                <div class="vd to/2">
+                  <label class="rc ac" for="fullname">Name*</label>
+                  <input type="text" name="fullname" id="fullname" placeholder="Lenka Wonder"
+                    class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" required />
+                </div>
+
+                <div class="vd to/2">
+                  <label class="rc ac" for="email">Email address*</label>
+                  <input type="email" name="email" id="email" placeholder="example@gmail.com"
+                    class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" required />
+                </div>
+              </div>
+
+              <div class="tc sf yo ap zf ep qb">
+                <div class="vd to/2">
+                  <label class="rc ac" for="phone">Phone number*</label>
+                  <input type="text" name="phone" id="phone" placeholder="+420 177 334 343"
+                    class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" required />
+                </div>
+              </div>
+
+              <div class="fb">
+                <label class="rc ac" for="message">How can I help you?*</label>
+                <textarea placeholder="Message" rows="4" name="message" id="message"
+                  class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 ci" required></textarea>
+              </div>
+
+              <div class="fb">
+                <label class="rc ac" for="consent">
+                  <input type="checkbox" id="consent" name="consent" required />
+                  I agree to the processing of personal data
+                </label>
+              </div>
+
+              <div class="tc xf">
+                <button class="btn-primary lk dk rg tc wf xf _l gi hi">Send Message</button>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ===== Contact End ===== -->
+
   </main>
+
+  <!-- ===== Footer Start ===== -->
+  <footer>
+    <div class="bb ze ki xn 2xl:ud-px-0">
+
+      <div class="ji gp">
+        <div class="tc uf ap gg fp">
+
+          <div class="animate_top zd/2 to/4">
+            <a href="index.html" class="footer-logo">
+              <img src="images/Logo_monika-financial-adviser-brno-czech-republic.svg" alt="Logo" class="om" />
+            </a>
+          </div>
+
+          <div class="animate_top vd ro tc sf lg:yo lg:tn lg:un gg footer-nav">
+            <a href="index.html" class="sc xl">Home</a>
+            <a href="about.html" class="sc xl">About</a>
+            <!-- <a href="myteam.html" class="sc xl">How I Work</a> -->
+            <a href="insights.html" class="sc xl">Insights</a>
+            <a href="FAQ.html" class="sc xl">FAQ</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="bh ch pm tc uf sf yo wf xf ap cg fp bj">
+        <div class="animate_top">
+          <ul class="tc wf gg">
+            <li><a href="PrivacyPolicy.html" class="xl">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="animate_top">
+          <p>&copy; 2026 Monika Souza. All rights reserved.</p>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+  <!-- ===== Footer End ===== -->
+
+  <!-- ====== Back To Top Start ===== -->
+  <button aria-label="Scroll To Top"
+    class="xc wf xf ie ld vg sr gh tr g sa ta _a"
+    @click="window.scrollTo({top: 0, behavior: 'smooth'})"
+    @scroll.window="scrollTop = (window.pageYOffset > 50) ? true : false"
+    :class="{ 'uc' : scrollTop }">
+    <svg class="uh se qd" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <path
+        d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z" />
+    </svg>
+  </button>
+  <!-- ====== Back To Top End ===== -->
+
+  <script defer src="bundle.js"></script>
+
 </body>
 
 </html>
-
-
-      <!-- ===== About Start ===== -->
-      <section class="ji gp uq 2xl:ud-py-35 pg">
-        <div class="bb ze ki xn wq">
-          <div class="tc wf gg qq">
-            <!-- About Images -->
-            <div class="animate_left xc gn gg jn/2 i">
-              <div>
-                <img src="images/about-01.png" alt="About" class="ib" />
-                <img src="images/about-02.png" alt="About" />
-              </div>
-              <div>
-                
-                <img src="images/about-03.png" alt="About" class="ob gb" />
-                
-              </div>
-            </div>
-
-            <!-- About Content -->
-            <div class="animate_right jn/2">
-              <h4 class="ek yj mk gb">Before we work together </h4>
-              <h2 class="fk vj zp pr kk wm qb">Working together requires alignment. </h2>
-              <p class="uo">This short introduction will help you understand how I think, how I work, and what I expect from the relationship.  
-
-  <a href="https://www.youtube.com/watch?v=sIYKr8s8S2Q" data-fslightbox class="vc wf hg mb">
-    <span class="tc wf xf be dd rg i gh ua">
-      <span class="nf h vc yc vd rg gh qk -ud-z-1"></span>
-      <img src="images/icon-play.svg" alt="Play" />
-    </span>  <br>
-    <span class="kk">A brief introduction - 2 minutes</span>
-  </a>
-
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ===== About End ===== -->
-      
-    <!-- ===== Projects Start ===== -->
-      <section class="pg pj vp mr oj wp nr">
-        
-
-      <!-- ===== Testimonials Start ===== -->
-      <section class="hj rp hr">
-        <!-- Section Title Start -->
-        <div
-          x-data="{ sectionTitle: `What my clients are saying`, sectionTitleText: `Real stories of financial transformation and success.`}">
-          <div class="animate_top bb ze rj ki xn vq">
-            <h2 x-text="sectionTitle" class="fk vj pr kk wm on/5 gq/2 bb _b">
-            </h2>
-            <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
-          </div>
-
-
-        </div>
-        <!-- Section Title End -->
-
-        <div class="bb ze ki xn ar">
-          <div class="animate_top jb cq">
-            <!-- Slider main container -->
-            <div class="swiper testimonial-01">
-              <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
-    <!-- Slide 1 -->
-    <div class="swiper-slide">
-      <div class="i hh rm sg vk xm bi qj">
-        <!-- Border Shape -->
-        <span class="rc je md/2 gh xg h q r"></span>
-        <span class="rc je md/2 mh yg h q p"></span>
-
-        <div class="tc sf rn tn un zf dp">
-        <img class="bf" src="images/Testemonial_Ellen and Rodrigo_Monika financial services Brno Czech Republic.png" alt="Ellen & Rodrigo" />
-
-          <div>
-            <img src="images/icon-quote.svg" alt="Quote" />
-            <p class="ek ik xj _p kc fb">
-              Monika is a very professional financial advisor. 
-              She not only helped us establish successful investments but also to close a nice deal on a realty mortgage. 
-              I definitely recommend her services!
-            </p>
-            <div class="tc yf vf">
-              <div>
-                <span class="rc ek xj kk wm zb">Ellen & Rodrigo Dutra</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ✅ New Slide 2 -->
-    <div class="swiper-slide">
-      <div class="i hh rm sg vk xm bi qj">
-        <!-- Border Shape -->
-        <span class="rc je md/2 gh xg h q r"></span>
-        <span class="rc je md/2 mh yg h q p"></span>
-
-        <div class="tc sf rn tn un zf dp">
-          <img class="bf" src="images/Testemonial_Anna_Monika financial services Brno Czech Republic.png" alt="User" />
-
-          <div>
-            <img src="images/icon-quote.svg" alt="Quote" />
-            <p class="ek ik xj _p kc fb">
-              Working with Monika has completely changed the way I handle my finances. 
-              Her clarity, empathy, and strategy gave me real confidence and tangible results. 
-              I finally feel in control of my money and future.
-            </p>
-            <div class="tc yf vf">
-              <div>
-                <span class="rc ek xj kk wm zb">Anna Novak</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-              <!-- If we need navigation -->
-              <div class="tc wf xf fg jb">
-                <div class="swiper-button-prev c tc wf xf ie ld rg _g dh pf ml vr hh rm tl zm rl ym">
-                  <svg class="th lm" width="14" height="14" viewBox="0 0 14 14" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M3.52366 7.83336L7.99366 12.3034L6.81533 13.4817L0.333663 7.00002L6.81533 0.518357L7.99366 1.69669L3.52366 6.16669L13.667 6.16669L13.667 7.83336L3.52366 7.83336Z"
-                      fill="" />
-                  </svg>
-                </div>
-                <div class="swiper-button-next c tc wf xf ie ld rg _g dh pf ml vr hh rm tl zm rl ym">
-                  <svg class="th lm" width="14" height="14" viewBox="0 0 14 14" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M10.4763 6.16664L6.00634 1.69664L7.18467 0.518311L13.6663 6.99998L7.18467 13.4816L6.00634 12.3033L10.4763 7.83331H0.333008V6.16664H10.4763Z"
-                      fill="" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ===== Testimonials End ===== -->
-      <!-- ===== Clients Start ===== -->
-      <section class="pj vp mr">
-        <!-- Section Title Start -->
-        <div
-          x-data="{ sectionTitle: `References`, sectionTitleText: `Where I have been published, collaborated or spoke.`}">
-          <div class="animate_top bb ze rj ki xn vq">
-            <h2 x-text="sectionTitle" class="fk vj pr kk wm on/5 gq/2 bb _b">
-            </h2>
-            <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
-          </div>
-
-
-        </div>
-        <!-- Section Title End -->
-
-        <div class="bb ze ah ch pm hj xp ki xn 2xl:ud-px-49 bc">
-          <div class="wc rf qn zf cp kq xf wf">
-            <a href="#" class="rc animate_top">
-              <img class="th wl ml il zl om" src="images/brand-light-01.svg" alt="Clients" />
-            
-            </a>
-            <a href="https://www.brnoexpatcentre.eu/events/33243/" target="_blank" rel="noopener" class="rc animate_top">
-              <img class="tk ml il zl om" src="images/brand-light-02.svg" alt="Clients" />
-              
-            </a>
-            <a href="https://www.heroine.cz/spolecnost/2377-spicky-za-lodicky-monika-souza-zvladla-karieru-baletky-i-uspesne-financni-poradkyne" target="_blank" rel="noopener" class="rc animate_top">
-              <img class="tk ml il zl om" src="images/brand-light-03.svg" alt="Clients" />
-             
-            </a>
-            <a href="#" class="rc animate_top">
-              <img class="tk ml il zl om" src="images/brand-light-04.svg" alt="Clients" />
-           
-            </a>
-            <a href="#" class="rc animate_top">
-              <img class="tk ml il zl om" src="images/brand-light-05.svg" alt="Clients" />
-           
-            </a>
-            <a href="#" class="rc animate_top">
-              <img class="tk ml il zl om" src="images/Logo_monika-financial-adviser-brno-czech-republic.svg" alt="Clients" />
-                      </a>
-          </div>
-        </div>
-      </section>
-      <!-- ===== Clients End ===== -->
-
-  <!-- ===== Contact Start ===== -->
-  <section id="contact" class="i pg fh rm ji gp uq">
-    <!-- Bg Shapes -->
-
-
-    <!-- Section Title Start -->
-    <div x-data="{ sectionTitle: `Contact`, sectionTitleText: `Let me know how can I help you achieve your financial goals.`}">
-      <div class="animate_top bb ze rj ki xn vq">
-        <h2 x-text="sectionTitle" class="fk vj pr kk wm on/5 gq/2 bb _b">
-        </h2>
-        <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
-      </div>
-    </div>
-    <!-- Section Title End -->
-
-    <div class="i va bb ye ki xn wq jb mo">
-      <div class="tc uf sn tf rn un zf xl:gap-10">
-        <div class="animate_top w-full mn/5 to/3 vk sg hh sm yh rq i pg contact-info-card">
-          <!-- Bg Shapes -->
-      
-          <div class="fb">
-            <h4 class="wj kk wm cc">Email Address</h4>
-            <p><a href="mailto:Monikasouza@partners.cz">Monikasouza@partners.cz</a></p>
-          </div>
-          <div class="fb">
-            <h4 class="wj kk wm cc">Address</h4>
-            <p>Nové sady 988, 602 00 Brno-střed.</p>
-          </div>
-          <div class="fb">
-            <h4 class="wj kk wm cc">Phone Number</h4>
-            <p><a href="tel:+420777223684">+420 777 223 684</a></p>
-          </div>
-
-          <span class="rc nd rh tm lc fb"></span>
-
-          <div>
-            <ul class="tc wf fg">
-              <li>
-                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="c tc wf xf ie ld rg ml il tl">
-                  <svg class="th lm ml il" width="19" height="18" viewBox="0 0 19 18" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M4.36198 2.58327C4.36174 3.0695 4.16835 3.53572 3.82436 3.87937C3.48037 4.22301 3.01396 4.41593 2.52773 4.41569C2.0415 4.41545 1.57528 4.22206 1.23164 3.87807C0.887991 3.53408 0.69507 3.06767 0.695313 2.58144C0.695556 2.09521 0.888943 1.62899 1.23293 1.28535C1.57692 0.941701 2.04333 0.748781 2.52956 0.749024C3.01579 0.749267 3.48201 0.942654 3.82566 1.28664C4.1693 1.63063 4.36222 2.09704 4.36198 2.58327ZM4.41698 5.77327H0.750313V17.2499H4.41698V5.77327ZM10.2103 5.77327H6.56198V17.2499H10.1736V11.2274C10.1736 7.87244 14.5461 7.56077 14.5461 11.2274V17.2499H18.167V9.98077C18.167 4.32494 11.6953 4.53577 10.1736 7.31327L10.2103 5.77327Z"
-                      fill="" />
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="animate_top w-full nn/5 vo/3 vk sg hh sm yh tq">
-          <form action="#" method="POST">
-            <div class="tc sf yo ap zf ep qb">
-              <div class="vd to/2">
-                <label class="rc ac" for="fullname">Name*</label>
-                <input type="text" name="fullname" id="fullname" placeholder="Lenka Wonder"
-                  class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" required />
-              </div>
-
-              <div class="vd to/2">
-                <label class="rc ac" for="email">Email address*</label>
-                <input type="email" name="email" id="email" placeholder="example@gmail.com"
-                  class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" required />
-              </div>
-            </div>
-
-            <div class="tc sf yo ap zf ep qb">
-              <div class="vd to/2">
-                <label class="rc ac" for="phone">Phone number*</label>
-                <input type="text" name="phone" id="phone" placeholder="+420 177 334 343"
-                  class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" required />
-              </div>
-            </div>
-
-            <div class="fb">
-              <label class="rc ac" for="message">How can I help you?*</label>
-              <textarea placeholder="Message" rows="4" name="message" id="message"
-                class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 ci" required></textarea>
-            </div>
-
-            <div class="fb">
-              <label class="rc ac" for="consent">
-                <input type="checkbox" id="consent" name="consent" required />
-                I agree to the processing of personal data
-              </label>
-            </div>
-
-            <div class="tc xf">
-              <button class="btn-primary lk dk rg tc wf xf _l gi hi">Send Message</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ===== Contact End ===== -->
-
-
-      
-    </main>
-    <!-- ===== Footer Start ===== -->
-    <footer>
-      <div class="bb ze ki xn 2xl:ud-px-0">
-              <!-- Footer Top -->
-        <div class="ji gp">
-          <div class="tc uf ap gg fp">
-            <!-- Left: logo (smaller, like top menu) -->
-            <div class="animate_top zd/2 to/4">
-              <a href="index.html" class="footer-logo">
-                <img src="images/Logo_monika-financial-adviser-brno-czech-republic.svg" alt="Logo" class="om" />
-              
-              </a>
-            </div>
-
-            <!-- Right: single line menu + newsletter CTA -->
-            <div class="animate_top vd ro tc sf lg:yo lg:tn lg:un gg footer-nav">
-              <a href="index.html" class="sc xl">Home</a>
-            <a href="about.html" class="sc xl">About</a>
-           <!-- <a href="myteam.html" class="sc xl">How I Work</a>-->
-            <a href="insights.html" class="sc xl">Insights</a>
-            <a href="FAQ.html" class="sc xl">FAQ</a>
-            </div>
-          </div>
-        </div>
-        <!-- Footer Top -->
-
-
-        <!-- Footer Bottom -->
-        <div class="bh ch pm tc uf sf yo wf xf ap cg fp bj">
-          <div class="animate_top">
-            <ul class="tc wf gg">
-              <li><a href="PrivacyPolicy.html" class="xl">Privacy Policy</a></li>
-            </ul>
-          </div>
-
-          <div class="animate_top">
-            <p>&copy; 2026 Monika Souza. All rights reserved.</p>
-          </div>
-        </div>
-        <!-- Footer Bottom -->
-      </div>
-    </footer>
-
-    <!-- ===== Footer End ===== -->
-
-    <!-- ====== Back To Top Start ===== -->
-    <button 
-    aria-label="Scroll To Top" class="xc wf xf ie ld vg sr gh tr g sa ta _a" @click="window.scrollTo({top: 0, behavior: 'smooth'})"
-      @scroll.window="scrollTop = (window.pageYOffset > 50) ? true : false" :class="{ 'uc' : scrollTop }">
-      <svg class="uh se qd" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-        <path
-          d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z" />
-      </svg>
-    </button>
-
-    <!-- ====== Back To Top End ===== -->
-
-    <script defer src="bundle.js"></script>
-  </body>
-
-  </html>
