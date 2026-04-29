@@ -3441,7 +3441,15 @@ section.pj.vp.mr {
   height: 340px;
   background: linear-gradient(90deg, #d7d3cc 0%, #ece9e4 45%, #d5d1c9 100%);
   overflow: hidden;
-  }
+}
+
+.about-hero-image.faq-hero {
+  background-image: url("images/FAQ.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 340px;
+}
 
 /* Monika Souza name after logo*/
 
@@ -3520,6 +3528,7 @@ section.pj.vp.mr {
   max-width: 820px;
   margin: 0 auto;
   padding: 0 20px;                  /* keep this LOW to avoid big gaps */
+  margin-bottom: 180px;
 }
 
 /* --- Small label (ABOUT MONIKA) --- */
@@ -3554,20 +3563,6 @@ section.pj.vp.mr {
   max-width: 640px;
   margin: 0 auto;
 }
-@media (max-width: 768px) {
-  .about-intro {
-    min-height: 50vh;
-    padding: 0 22px;
-  }
-
-  .about-title {
-    font-size: 36px;
-  }
-
-  .about-text {
-    font-size: 17px;
-  }
-}
 
 /* ===== About Story (Photo ↔ Text) ===== */
 
@@ -3582,11 +3577,16 @@ section.pj.vp.mr {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
-  align-items: center;
+  align-items: stretch;
   margin-bottom: 96px;
 }
 
 /* --- Reverse row (text left / image right) --- */
+.story-row-reverse {
+  align-items: stretch;
+  gap: 48px;
+}
+
 .story-row-reverse .story-photo {
   order: 2;
 }
@@ -3598,7 +3598,7 @@ section.pj.vp.mr {
 /* --- Image --- */
 .story-photo img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   border-radius: 4px;
   object-fit: cover;
@@ -3634,6 +3634,23 @@ section.pj.vp.mr {
   font-size: 17px;
   line-height: 1.7;
   color: #1d1d1d;
+}
+
+.story-text-block .faq-list {
+  margin-top: 16px;
+}
+
+.story-text-block .faq-item {
+  margin-bottom: 24px;
+}
+
+.story-text-block .faq-question,
+.story-text-block .faq-answer {
+  display: block;
+}
+
+.story-text-block .faq-answer {
+  margin-top: 8px;
 }
 
 @media (max-width: 768px) {
