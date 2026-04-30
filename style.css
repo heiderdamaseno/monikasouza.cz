@@ -3445,7 +3445,7 @@ section.pj.vp.mr {
 /* Full-width hero image band */
 .about-hero-image {
   width: 100%;
-  height: 500px;
+  height: 400px;
 
   background-image: url("images/optimized/monika-about-transformation-financial-life.jpg");
   background-size: cover;
