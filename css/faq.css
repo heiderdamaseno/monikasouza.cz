@@ -1,1 +1,28 @@
 /* FAQ page-specific styles */
+
+.about-hero-image,
+.about-hero-image.faq-hero {
+  width: 100%;
+  height: 420px;
+  max-width: 1080px;
+  margin: 0 auto 40px;
+  border-radius: 18px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.08);
+}
+
+.about-hero-image.faq-hero {
+  background-image: url("../images/optimized/faq-loans-banner.jpg");
+}
+
+.story-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
