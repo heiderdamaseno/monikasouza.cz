@@ -1,0 +1,30 @@
+.hero-copy {
+  margin-left: 80px;
+  max-width: 560px;
+}
+
+.hero-copy h1 {
+  max-width: 520px;
+}
+
+.hero-subtext {
+  line-height: 1.45;
+  margin-top: 0.75rem;
+}
+
+@media (min-width: 1400px) {
+  .hero-copy {
+    margin-left: 120px;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero-copy {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .hero-copy h1 {
+    max-width: 100%;
+  }
+}
