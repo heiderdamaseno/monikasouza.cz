@@ -1,2 +1,21 @@
 /* Global styles for Monika Souza website */
 /* Add shared custom rules here. */
+
+/* Plain text pages (Privacy Policy) */
+.page-text {
+  max-width: 720px;
+  margin: 0 auto 120px;
+  padding: 160px 20px 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+  color: #1d1d1d;
+}
+.page-text h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  margin: 36px 0 8px;
+  color: #050505;
+}
+.page-text a,
+.about-intro a { text-decoration: underline; }
